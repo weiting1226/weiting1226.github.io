@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<!-- saved from url=(0103)https://my.stripo.email/cabinet/#/template-editor/?projectId=589033&templateId=1237381&type=MY_TEMPLATE -->
+<html class="full-height" style="--font-family:-apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Oxygen-Sans, Ubuntu, Cantarell, &quot;Helvetica Neue&quot;, sans-serif; --font-size:14px; --default-font-color:#555555; --primary-color:#32cb4b; --secondary-color:#ffffff; --option-panel-background-color:#f6f6f6; --panels-border-color:#dddddd; --border-radius-base:17px; --primary-btn-border-color:#2db743; --primary-btn-hover-background-color:#28a23c; --primary-btn-hover-border-color:#218631; --primary-btn-focus-border-color:#14511e; --secondary-btn-border-color:#cccccc; --secondary-btn-hover-background-color:#e6e6e6; --secondary-btn-hover-border-color:#adadad; --secondary-btn-focus-border-color:#8c8c8c; --secondary-btn-active-background-color:#d4d4d4; --font-muted-color:#777777; --dark-icon-color:#5f5f5f; --dropdown-link-hover:#484848; --border-radius-large:30px; --border-radius-small:10px;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./Template editor_files/main.d9e192ab300198def870.js.下載"></script><script src="./Template editor_files/scripts.min.js.下載"></script><script src="./Template editor_files/stripodeps.d9e192ab300198def870.js.下載"></script><script src="./Template editor_files/babel_polyfill.js.下載"></script>
+  
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;;
+    frame-src data: https://stripo-app.firebaseio.com https://stripo-app.firebaseapp.com *.stripe.com *.google.com *.facebook.com www.youtube.com &#39;self&#39; https://www.pinterest.com intercom-sheets.com;
+    style-src &#39;self&#39; &#39;unsafe-inline&#39; *;
+    script-src &#39;self&#39; &#39;unsafe-eval&#39; &#39;unsafe-inline&#39; www.youtube.com *.ampproject.org googletagmanager.com *.googletagmanager.com *.amplitude.com api.vk.com *.gstatic.com *.facebook.net *.google.com *.google-analytics.com *.stripe.com *.pingdom.net *.intercom.io *.intercomcdn.com *.stripo.email *.zscalertwo.net *.zscaler.com *.zscaler.net *.pinimg.com *.getsitecontrol.com *.vimeo.com https://vimeo.com https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js https://stripo-app.firebaseio.com https://stripo-app.firebaseapp.com https://www.googleoptimize.com;
+    img-src &#39;self&#39; data: *;
+    connect-src &#39;self&#39; *;
+    child-src blob:;
+    font-src &#39;self&#39; *;
+    object-src &#39;self&#39; *">
+  <title>Template editor</title>
+  <!--<base href="/cabinet/">--><base href=".">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Tag Manager -->
+  <script type="text/javascript" async="" src="./Template editor_files/b1m243ec"></script><script src="./Template editor_files/cb=gapi.loaded_0" async=""></script><script id="facebook-jssdk" src="https://connect.facebook.net/en_US/sdk.js"></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="./Template editor_files/core.js.下載"></script><script type="text/javascript" async="" src="./Template editor_files/analytics.js.下載"></script><script type="text/javascript" async="" src="./Template editor_files/amplitude-4.5.2-min.gz.js.下載"></script><script async="" src="./Template editor_files/gtm.js.下載"></script><script>(function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+      'gtm.start':
+        new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+      'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, 'script', 'dataLayer', 'GTM-KGD7HVJ');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Amplitude analytics -->
+  <script type="text/javascript">
+    (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+    ;r.type="text/javascript";r.async=true
+    ;r.src="https://cdn.amplitude.com/libs/amplitude-4.5.2-min.gz.js"
+    ;r.onload=function(){if(e.amplitude.runQueuedFunctions){
+      e.amplitude.runQueuedFunctions()}else{
+      console.log("[Amplitude] Error: could not load SDK")}}
+    ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+    ;function s(e,t){e.prototype[t]=function(){
+      this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+      var o=function(){this._q=[];return this}
+      ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+      ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+        ;return this}
+      ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+      ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+      ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut",
+        "setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify",
+        "clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","logEventWithTimestamp",
+        "logEventWithGroups","setSessionId","resetSessionId"]
+      ;function v(e){function t(t){e[t]=function(){
+        e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+        for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+        e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+        ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+      ;e.amplitude=n})(window,document);
+
+    amplitude.getInstance().init("246810a6e954a53a140e3232aac8f1a9");
+  </script>
+  <!-- End Amplitude analytics -->
+
+
+  <link class="stripo-styles-marker" rel="shortcut icon" href="https://my.stripo.email/cabinet/assets/img/favicons/favicon.png"><link rel="stylesheet" href="./Template editor_files/dev-esd-styles.css" class="stripo-styles-marker"><link rel="stylesheet" href="./Template editor_files/styles.min.css" class="stripo-styles-marker"><link rel="stylesheet" href="./Template editor_files/fonts.css" class="stripo-styles-marker">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://my.stripo.email/cabinet/assets/img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://my.stripo.email/cabinet/assets/img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://my.stripo.email/cabinet/assets/img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://my.stripo.email/cabinet/assets/img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://my.stripo.email/cabinet/assets/img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://my.stripo.email/cabinet/assets/img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://my.stripo.email/cabinet/assets/img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://my.stripo.email/cabinet/assets/img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://my.stripo.email/cabinet/assets/img/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="https://my.stripo.email/cabinet/assets/img/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="https://my.stripo.email/cabinet/assets/img/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://my.stripo.email/cabinet/assets/img/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://my.stripo.email/cabinet/assets/img/favicons/android-chrome-192x192.png" sizes="192x192">
+  <meta name="msapplication-square70x70logo" content="assets/img/favicons/smalltile.png">
+  <meta name="msapplication-square150x150logo" content="assets/img/favicons/mediumtile.png">
+  <meta name="msapplication-wide310x150logo" content="assets/img/favicons/widetile.png">
+  <meta name="msapplication-square310x310logo" content="assets/img/favicons/largetile.png">
+
+
+<link rel="stylesheet" href="./Template editor_files/styles.3a4860ae2679d6927b0b.css"><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}.ace_text-input-ios {position: absolute !important;top: -100000px !important;left: -100000px !important;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style>.loader-c[_ngcontent-pro-c0]{top:50%;position:absolute;transform:translateY(-50%);margin-top:-50px}</style><script id="stripoScript" type="text/javascript" src="./Template editor_files/stripo.js.下載"></script><script src="./Template editor_files/LAB.min.js.下載"></script><script src="./Template editor_files/runtime.d8fed6e.js.下載"></script><style>.spans-text[_ngcontent-pro-c1]{display:block!important;overflow-wrap:break-word;max-width:370px;word-wrap:break-word}.close[_ngcontent-pro-c1]:focus, .close[_ngcontent-pro-c1]:focus   span[_ngcontent-pro-c1], .close[_ngcontent-pro-c1] > span[_ngcontent-pro-c1]:focus{outline:none}.progress-caption[_ngcontent-pro-c1]{text-align:center;position:absolute;top:0;width:100%}.progress-bar.progress-bar-success[_ngcontent-pro-c1]{height:20px;transition:width .3s}.progress[_ngcontent-pro-c1], .with-button[_ngcontent-pro-c1]{position:relative}.with-button[_ngcontent-pro-c1]{padding-bottom:37px}.with-button[_ngcontent-pro-c1]   button.btn-default[_ngcontent-pro-c1]{color:#fff;background-color:#d9534f;border-color:#d43f3a;box-shadow:0 0 0 rgba(212,63,58,.6);-webkit-animation:pulse-danger 2s infinite;animation:pulse-danger 2s infinite;position:absolute;bottom:15px}</style><style>.chat-zone[_ngcontent-pro-c2]{cursor:pointer;position:fixed;z-index:99999;bottom:10px}.chat-right[_ngcontent-pro-c2]{right:10px}.chat-left[_ngcontent-pro-c2]{left:10px}.chat-zone[_ngcontent-pro-c2]   img[_ngcontent-pro-c2]{width:77px}</style><style>[_nghost-pro-c3]{display:block}.header-menu-padding[_ngcontent-pro-c3]{display:flex}.header-menu-breadcrumbs[_ngcontent-pro-c3]{flex:4 0 auto;padding-left:15px}.header-menu-dropdowns[_ngcontent-pro-c3]{flex-basis:570px;padding-right:15px}.help-link[_ngcontent-pro-c3]{max-width:170px}@media screen and (max-width:1200px){.header-menu-dropdowns[_ngcontent-pro-c3]{flex-basis:400px}}@media screen and (max-width:1100px){.header-menu-dropdowns[_ngcontent-pro-c3]{flex-basis:315px}.help-description[_ngcontent-pro-c3]{display:none}}@media screen and (max-width:991px){.header-menu-breadcrumbs[_ngcontent-pro-c3], .header-menu-dropdowns[_ngcontent-pro-c3]{flex-basis:265px}}@media screen and (max-width:767px){.header-menu-padding[_ngcontent-pro-c3]{display:block}.header-menu-breadcrumbs[_ngcontent-pro-c3], .header-menu-dropdowns[_ngcontent-pro-c3]{float:none;width:100%;padding:0}.btn-link[_ngcontent-pro-c3]{float:left;padding-left:0}.help-description[_ngcontent-pro-c3]{display:inline}}</style><style>.activate-reminder[_ngcontent-pro-c4]{background:#ffc;padding:7px;font-size:13px}a[_ngcontent-pro-c4]:hover{text-decoration:none}[_nghost-pro-c4]{position:fixed;top:0;z-index:9999;width:100%}</style><style>[_nghost-pro-c8]{position:relative}.dropdown-menu[_ngcontent-pro-c8]{display:block}button[_ngcontent-pro-c8]{display:flex;flex-direction:row;align-items:center}.project-name-label[_ngcontent-pro-c8]{max-width:120px;overflow:hidden;text-overflow:ellipsis}.company-avatar[_ngcontent-pro-c8]{margin:-6px 6px -6px -7px}.tooltip-container[_ngcontent-pro-c8]{position:absolute;display:flex;top:0;left:0;right:0;bottom:0;z-index:1;cursor:not-allowed}@media screen and (max-width:992px){.project-name-label[_ngcontent-pro-c8]{max-width:85px}}@media screen and (max-width:767px){.project-name-label[_ngcontent-pro-c8]{margin-right:15px;max-width:none}.company-menu[_ngcontent-pro-c8]{width:calc(100% - 300px)}.company-menu[_ngcontent-pro-c8]   .caret[_ngcontent-pro-c8]{position:absolute;right:13px}}</style><style>.dropdown-menu[_ngcontent-pro-c9]{display:block}.empty-user-avatar[_ngcontent-pro-c9]{height:32px;width:32px;display:inline-block;top:0;left:0;position:absolute;background:url(default-user-avatar.21945271f9e648557987.png) 50%;background-size:contain;overflow:hidden;border-radius:50%}.user-avatar[_ngcontent-pro-c9]{background-size:cover}.user-menu-name[_ngcontent-pro-c9]{overflow:hidden;text-overflow:ellipsis;max-width:80%!important;margin-left:3px}.upgrade-plan-button-wrapper[_ngcontent-pro-c9]{margin-left:5px}.organization-name[_ngcontent-pro-c9]{text-overflow:ellipsis;width:100%;overflow:hidden}</style><style>.user-avatar[_ngcontent-pro-c11]{background-size:cover!important;background:no-repeat 50%}.small[_ngcontent-pro-c11]{height:32px;width:32px;margin:0}.small[_ngcontent-pro-c11]   span[_ngcontent-pro-c11]{font-size:12px!important;padding-top:8px}</style><style>#content-area[_ngcontent-pro-c12]{overflow-y:scroll;position:relative}</style><style>.esdev-t-upgrade-sub[_ngcontent-pro-c7]{max-width:150px}</style><style>@media screen and (max-width:767px){.breadcrumb[_ngcontent-pro-c6]{padding-left:0}}.breadcrumb[_ngcontent-pro-c6]{white-space:nowrap}.breadcrumb[_ngcontent-pro-c6] > li[_ngcontent-pro-c6]{height:20px;float:left;vertical-align:bottom}.breadcrumb[_ngcontent-pro-c6] > li[_ngcontent-pro-c6]:last-child{max-width:200px}</style><style></style><style>span[_ngcontent-pro-c16]{margin-right:15px}</style><style>.templates-header[_ngcontent-pro-c17]{display:flex;justify-content:space-between}.templates-header[_ngcontent-pro-c17]   div[_ngcontent-pro-c17]{padding-right:15px}.templates-header[_ngcontent-pro-c17]   div[_ngcontent-pro-c17]   input[_ngcontent-pro-c17]{border-radius:17px;height:34px;padding-left:12px;padding-right:12px;font-size:14px;width:300px}.templates-header[_ngcontent-pro-c17]   div[_ngcontent-pro-c17]   .input-icon[_ngcontent-pro-c17]{font-size:14px!important}.with-branded-button[_ngcontent-pro-c17]{display:flex}.project-title[_ngcontent-pro-c17]{overflow-wrap:break-word}.dropdown-menu[_ngcontent-pro-c17], .empty-img[_ngcontent-pro-c17]{display:block}.empty-img[_ngcontent-pro-c17]{margin:0 auto;width:100%}.empty-img.emails[_ngcontent-pro-c17]{margin-top:-135px;max-width:232px}.empty-img.templates[_ngcontent-pro-c17]{max-width:406px;margin-bottom:15px}.empty-centered[_ngcontent-pro-c17]{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.no-data[_ngcontent-pro-c17]{display:flex;width:100%;align-items:center;justify-content:center;top:29vh;color:grey;position:relative}.move-popover-content[_ngcontent-pro-c17]{margin:-15px}.load-position[_ngcontent-pro-c17]{display:flex;align-items:center;justify-content:center;position:fixed;top:0;left:0;width:100%;height:100%}.buttons-panel[_ngcontent-pro-c17]{min-height:34px}</style><style>[_nghost-pro-c15]{display:block}</style><style>[_nghost-pro-c20]{display:flex}.grid-banner[_ngcontent-pro-c20]{background-color:#f6f6f6;padding:20px}.grid-banner-body[_ngcontent-pro-c20]   img[_ngcontent-pro-c20]{height:40px;margin-bottom:5px;width:33px}.grid-banner-body[_ngcontent-pro-c20]   p[_ngcontent-pro-c20]{margin:0}.grid-banner-body[_ngcontent-pro-c20]   h3[_ngcontent-pro-c20]{margin-bottom:10px;margin-top:0}</style><style id="ace_searchbox">	.ace_search {	background-color: #ddd;	color: #666;	border: 1px solid #cbcbcb;	border-top: 0 none;	overflow: hidden;	margin: 0;	padding: 4px 6px 0 4px;	position: absolute;	top: 0;	z-index: 99;	white-space: normal;	}	.ace_search.left {	border-left: 0 none;	border-radius: 0px 0px 5px 0px;	left: 0;	}	.ace_search.right {	border-radius: 0px 0px 0px 5px;	border-right: 0 none;	right: 0;	}	.ace_search_form, .ace_replace_form {	margin: 0 20px 4px 0;	overflow: hidden;	line-height: 1.9;	}	.ace_replace_form {	margin-right: 0;	}	.ace_search_form.ace_nomatch {	outline: 1px solid red;	}	.ace_search_field {	border-radius: 3px 0 0 3px;	background-color: white;	color: black;	border: 1px solid #cbcbcb;	border-right: 0 none;	box-sizing: border-box!important;	outline: 0;	padding: 0;	font-size: inherit;	margin: 0;	line-height: inherit;	padding: 0 6px;	min-width: 17em;	vertical-align: top;	}	.ace_searchbtn {	border: 1px solid #cbcbcb;	line-height: inherit;	display: inline-block;	padding: 0 6px;	background: #fff;	border-right: 0 none;	border-left: 1px solid #dcdcdc;	cursor: pointer;	margin: 0;	position: relative;	box-sizing: content-box!important;	color: #666;	}	.ace_searchbtn:last-child {	border-radius: 0 3px 3px 0;	border-right: 1px solid #cbcbcb;	}	.ace_searchbtn:disabled {	background: none;	cursor: default;	}	.ace_searchbtn:hover {	background-color: #eef1f6;	}	.ace_searchbtn.prev, .ace_searchbtn.next {	padding: 0px 0.7em	}	.ace_searchbtn.prev:after, .ace_searchbtn.next:after {	content: "";	border: solid 2px #888;	width: 0.5em;	height: 0.5em;	border-width:  2px 0 0 2px;	display:inline-block;	transform: rotate(-45deg);	}	.ace_searchbtn.next:after {	border-width: 0 2px 2px 0 ;	}	.ace_searchbtn_close {	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAcCAYAAABRVo5BAAAAZ0lEQVR42u2SUQrAMAhDvazn8OjZBilCkYVVxiis8H4CT0VrAJb4WHT3C5xU2a2IQZXJjiQIRMdkEoJ5Q2yMqpfDIo+XY4k6h+YXOyKqTIj5REaxloNAd0xiKmAtsTHqW8sR2W5f7gCu5nWFUpVjZwAAAABJRU5ErkJggg==) no-repeat 50% 0;	border-radius: 50%;	border: 0 none;	color: #656565;	cursor: pointer;	font: 16px/16px Arial;	padding: 0;	height: 14px;	width: 14px;	top: 9px;	right: 7px;	position: absolute;	}	.ace_searchbtn_close:hover {	background-color: #656565;	background-position: 50% 100%;	color: white;	}	.ace_button {	margin-left: 2px;	cursor: pointer;	-webkit-user-select: none;	-moz-user-select: none;	-o-user-select: none;	-ms-user-select: none;	user-select: none;	overflow: hidden;	opacity: 0.7;	border: 1px solid rgba(100,100,100,0.23);	padding: 1px;	box-sizing:    border-box!important;	color: black;	}	.ace_button:hover {	background-color: #eee;	opacity:1;	}	.ace_button:active {	background-color: #ddd;	}	.ace_button.checked {	border-color: #3399ff;	opacity:1;	}	.ace_search_options{	margin-bottom: 3px;	text-align: right;	-webkit-user-select: none;	-moz-user-select: none;	-o-user-select: none;	-ms-user-select: none;	user-select: none;	clear: both;	}	.ace_search_counter {	float: left;	font-family: arial;	padding: 0 8px;	}
+/*# sourceURL=ace/css/ace_searchbox */</style><style>	.ace_snippet-marker {	    -moz-box-sizing: border-box;	    box-sizing: border-box;	    background: rgba(194, 193, 208, 0.09);	    border: 1px dotted rgba(211, 208, 235, 0.62);	    position: absolute;	}</style><style>	.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {	    background-color: #CAD6FA;	    z-index: 1;	}	.ace_editor.ace_autocomplete .ace_line-hover {	    border: 1px solid #abbffe;	    margin-top: -1px;	    background: rgba(233,233,253,0.4);	}	.ace_editor.ace_autocomplete .ace_line-hover {	    position: absolute;	    z-index: 2;	}	.ace_editor.ace_autocomplete .ace_scroller {	   background: none;	   border: none;	   box-shadow: none;	}	.ace_rightAlignedText {	    color: gray;	    display: inline-block;	    position: absolute;	    right: 4px;	    text-align: right;	    z-index: -1;	}	.ace_editor.ace_autocomplete .ace_completion-highlight{	    color: #000;	    text-shadow: 0 0 0.01em;	}	.ace_editor.ace_autocomplete {	    width: 280px;	    z-index: 200000;	    background: #fbfbfb;	    color: #444;	    border: 1px lightgray solid;	    position: fixed;	    box-shadow: 2px 3px 5px rgba(0,0,0,.2);	    line-height: 1.4;	}</style><script charset="utf-8" src="./Template editor_files/trusted-types-checker-79a96411cda1ad4b6763ce22787d473d.js.下載"></script><style>.disabled-block[_ngcontent-pro-c24]{display:block;opacity:.6}.cursor-not-allowed[_ngcontent-pro-c24], .disabled-block[_ngcontent-pro-c24]{cursor:not-allowed}</style><style>.templates-header[_ngcontent-pro-c25]{display:flex;justify-content:space-between}.templates-header[_ngcontent-pro-c25]   div[_ngcontent-pro-c25]{padding-right:15px}.templates-header[_ngcontent-pro-c25]   div[_ngcontent-pro-c25]   input[_ngcontent-pro-c25]{border-radius:17px;height:34px;padding-left:12px;padding-right:12px;font-size:14px;width:300px}.templates-header[_ngcontent-pro-c25]   div[_ngcontent-pro-c25]   .input-icon[_ngcontent-pro-c25]{font-size:14px!important}.with-branded-button[_ngcontent-pro-c25]{display:flex}.project-title[_ngcontent-pro-c25]{overflow-wrap:break-word}.dropdown-menu[_ngcontent-pro-c25], .empty-img[_ngcontent-pro-c25]{display:block}.empty-img[_ngcontent-pro-c25]{margin:0 auto;width:100%}.empty-img.emails[_ngcontent-pro-c25]{margin-top:-135px;max-width:232px}.empty-img.templates[_ngcontent-pro-c25]{max-width:406px;margin-bottom:15px}.empty-centered[_ngcontent-pro-c25]{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.no-data[_ngcontent-pro-c25]{display:flex;width:100%;align-items:center;justify-content:center;top:29vh;color:grey;position:relative}.move-popover-content[_ngcontent-pro-c25]{margin:-15px}.load-position[_ngcontent-pro-c25]{display:flex;align-items:center;justify-content:center;position:fixed;top:0;left:0;width:100%;height:100%}.buttons-panel[_ngcontent-pro-c25]{min-height:34px}</style><style>.combine-left[_ngcontent-pro-c19]{border-bottom-left-radius:17px!important;border-top-left-radius:17px!important}.combine-left[_ngcontent-pro-c19]   button[_ngcontent-pro-c19]{border-bottom-left-radius:17px;border-top-left-radius:17px}.combine-right[_ngcontent-pro-c19]{border-bottom-right-radius:0!important;border-top-right-radius:0!important}.combine-right[_ngcontent-pro-c19]   button[_ngcontent-pro-c19]{border-bottom-right-radius:0;border-top-right-radius:0}.dropdown-menu[_ngcontent-pro-c19]   ul[_ngcontent-pro-c19]{max-height:300px;overflow-y:auto}.dropdown-menu.disabled[_ngcontent-pro-c19]{pointer-events:none}.displayed[_ngcontent-pro-c19]{display:block}.selected-item[_ngcontent-pro-c19]{color:#262626!important;background-color:#f5f5f5!important}.search-input-block[_ngcontent-pro-c19]{padding-bottom:8px}.remove-item[_ngcontent-pro-c19]{float:none!important;position:absolute;right:12px}.close-button-margin[_ngcontent-pro-c19]{width:12px;display:inline-block}.placeholder[_ngcontent-pro-c19]{color:#999}.disabled[_ngcontent-pro-c19]{color:#777;cursor:not-allowed!important}.select-combined-on-right[_ngcontent-pro-c19], .select-combined-on-right[_ngcontent-pro-c19] > button[_ngcontent-pro-c19]{border-top-right-radius:17px!important;border-bottom-right-radius:17px!important;margin-left:-2px}input[_ngcontent-pro-c19]{border-radius:17px!important}.check-mark[_ngcontent-pro-c19]{float:right;padding-left:10px;line-height:24px}.bs-actionsbox[_ngcontent-pro-c19]{padding:7px 15px 15px!important}.fit-height[_ngcontent-pro-c19]   ul[_ngcontent-pro-c19]{max-height:calc(100vh - 280px)}.select-item[_ngcontent-pro-c19]{padding:5px 15px 0!important;min-height:34px}.select-item[_ngcontent-pro-c19]   .multi-only[_ngcontent-pro-c19]{margin-left:10px}.select-item[_ngcontent-pro-c19]:hover   .multi-only[_ngcontent-pro-c19]{display:inline-block}.dropdown-menu[_ngcontent-pro-c19]   li[_ngcontent-pro-c19]   a[_ngcontent-pro-c19]   span.text[_ngcontent-pro-c19]{display:inline;line-height:24px}.multiple-wrapper[_ngcontent-pro-c19]{float:right;display:flex;align-items:baseline;margin-top:-1px}.cut-select-left[_ngcontent-pro-c19]{transition:none;border-radius:0 17px 17px 0}.transition-off[_ngcontent-pro-c19]   .dropdown-toggle[_ngcontent-pro-c19]{transition:none}.dropdown-menu[_ngcontent-pro-c19] > li[_ngcontent-pro-c19] > a.disabled[_ngcontent-pro-c19]:focus{text-decoration:initial;color:initial;background-color:initial}@media (max-width:1500px){.overflow-1500[_ngcontent-pro-c19]{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;width:30px!important}.icon-margin-right[_ngcontent-pro-c19]{margin-right:-15px}}</style><style>.no-data[_ngcontent-pro-c21]{width:100%;text-align:center;color:gray;height:40%;display:flex;align-items:flex-end;justify-content:center;top:30vh;position:absolute}[_nghost-pro-c21]{display:block;position:relative}.esdev-mb15[_ngcontent-pro-c21], .list-group[_ngcontent-pro-c21]{margin-bottom:20px}</style><style>.preview-folder-wrapper[_ngcontent-pro-c21]{height:163px}.selection[_ngcontent-pro-c21]{position:absolute;border:1px solid #31cb4b;background-color:rgba(49,201,74,.2);z-index:1909;border-radius:4px}[_nghost-pro-c21]{display:block;position:relative}.mb-grid-checkbox[_ngcontent-pro-c21]{opacity:0;z-index:2;margin-left:25px}.mb-grid-checkbox.folder-position[_ngcontent-pro-c21]{margin-left:10px;margin-top:22px;left:calc(calc(100% - 145px)/2)}.noSelection[_ngcontent-pro-c21]{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.cutElement[_ngcontent-pro-c21]{opacity:.5}.draggable[_ngcontent-pro-c21]{position:absolute;z-index:100;cursor:default!important;pointer-events:none}.bulbous-bow[_ngcontent-pro-c21]{height:40px;width:40px;position:absolute;top:100%;left:50%;z-index:-100}.esdev-pb-70[_ngcontent-pro-c21]{padding-bottom:70px}</style><style>.templates-header[_ngcontent-pro-c21]{display:flex;justify-content:space-between}.templates-header[_ngcontent-pro-c21]   div[_ngcontent-pro-c21]{padding-right:15px}.templates-header[_ngcontent-pro-c21]   div[_ngcontent-pro-c21]   input[_ngcontent-pro-c21]{border-radius:17px;height:34px;padding-left:12px;padding-right:12px;font-size:14px;width:300px}.templates-header[_ngcontent-pro-c21]   div[_ngcontent-pro-c21]   .input-icon[_ngcontent-pro-c21]{font-size:14px!important}.with-branded-button[_ngcontent-pro-c21]{display:flex}.project-title[_ngcontent-pro-c21]{overflow-wrap:break-word}.dropdown-menu[_ngcontent-pro-c21], .empty-img[_ngcontent-pro-c21]{display:block}.empty-img[_ngcontent-pro-c21]{margin:0 auto;width:100%}.empty-img.emails[_ngcontent-pro-c21]{margin-top:-135px;max-width:232px}.empty-img.templates[_ngcontent-pro-c21]{max-width:406px;margin-bottom:15px}.empty-centered[_ngcontent-pro-c21]{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.no-data[_ngcontent-pro-c21]{display:flex;width:100%;align-items:center;justify-content:center;top:29vh;color:grey;position:relative}.move-popover-content[_ngcontent-pro-c21]{margin:-15px}.load-position[_ngcontent-pro-c21]{display:flex;align-items:center;justify-content:center;position:fixed;top:0;left:0;width:100%;height:100%}.buttons-panel[_ngcontent-pro-c21]{min-height:34px}</style><style>[_nghost-pro-c27]{display:inline-flex;width:24px;height:24px;align-items:center;justify-content:center}[_nghost-pro-c27]   *[_ngcontent-pro-c27]{cursor:pointer}</style><style>[_nghost-pro-c28]{position:relative}[_nghost-pro-c28]   .three-points-top[_ngcontent-pro-c28]{opacity:0;position:absolute;top:2px;right:3px;z-index:2;cursor:pointer}.bordered[_ngcontent-pro-c28]:hover{box-shadow:0 0 0 2px #31cb4b;border-radius:10px}.bordered[_ngcontent-pro-c28]:hover   img[_ngcontent-pro-c28]{box-shadow:none!important;border-bottom-left-radius:0!important;border-bottom-right-radius:0!important}.template-controls-overlay[_ngcontent-pro-c28]{border-radius:10px}.drag-border[_ngcontent-pro-c28]{transform:rotate(-2deg);box-shadow:0 0 0 3px #31cb4b,0 8px 66px -9px #333!important;border-radius:10px!important}.drag-preview-container[_ngcontent-pro-c28]{position:relative;z-index:-1}.drag-preview-container[_ngcontent-pro-c28]   a.drag-preview-item[_ngcontent-pro-c28]:first-child{transform:rotate(4deg);box-shadow:0 0 0 3px #31cb4b;border-radius:10px}.drag-preview-container[_ngcontent-pro-c28]   a.drag-preview-item[_ngcontent-pro-c28]:nth-child(2){transform:rotate(-4deg);box-shadow:0 0 0 3px #31cb4b;border-radius:10px}.drag-preview-item[_ngcontent-pro-c28]{position:absolute;width:100%}.counter[_ngcontent-pro-c28]{position:absolute;background:#d43f3a;height:25px;width:25px;z-index:100;border-radius:50%;right:6px;text-align:center;top:-13px;color:#fff;line-height:normal;padding:3px 0}.counter__folder[_ngcontent-pro-c28]{right:43px;top:-6px;box-shadow:0 0 0 2px #fff}.hiddenPreview[_ngcontent-pro-c28]{display:none}.folder-name[_ngcontent-pro-c28]{text-align:center;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;height:44px;word-break:break-word;text-overflow:ellipsis;-webkit-box-orient:vertical}.template-controls[_ngcontent-pro-c28]{display:flex;justify-content:center}.ep-img[_ngcontent-pro-c28]{background:#f6f6f6}.template-info[_ngcontent-pro-c28]{box-shadow:0 0 0 1px #ddd;border-radius:0 0 10px 10px;padding:12px 10px 0;background-color:#fff}.template-image[_ngcontent-pro-c28]{height:0;padding-bottom:75%;display:inline-block;overflow:hidden;z-index:0;border-radius:10px 10px 0 0;box-shadow:0 0 0 1px #ddd;width:100%;background:#f5f5f5;vertical-align:top;margin-bottom:-5px}.esdev-template-name[_ngcontent-pro-c28], .template-name[_ngcontent-pro-c28]{text-align:center;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;height:44px;-webkit-box-orient:vertical;text-overflow:ellipsis;word-break:break-word}.template-date[_ngcontent-pro-c28]{text-align:center;padding:10px 0;display:flex;justify-content:space-between;align-items:flex-start;height:38px}.template-id[_ngcontent-pro-c28]{color:#777;background:#ddd;margin-right:2px;padding:.6em .6em .5em}.template-time[_ngcontent-pro-c28]{padding:0 5px;display:flex;flex:1;justify-content:center}.template-info[_ngcontent-pro-c28]   .btn-group[_ngcontent-pro-c28]{margin-right:-10px;float:right}.dropdown-menu[_ngcontent-pro-c28]   a[_ngcontent-pro-c28]{cursor:pointer}.dropdown-menu[_ngcontent-pro-c28]   .dropdown-header[_ngcontent-pro-c28]{display:flex}.dropdown-menu[_ngcontent-pro-c28]   .label-id[_ngcontent-pro-c28]{display:flex;align-items:center;margin-right:4px}</style><style>.btn-group.open[_ngcontent-pro-c29]   .dropdown-toggle[_ngcontent-pro-c29]{box-shadow:none}</style><style>.displayed[_ngcontent-pro-c31]{display:block}.email-name-input[_ngcontent-pro-c31]{border-top-left-radius:17px!important;border-bottom-left-radius:17px!important}.toggleSettingPanelPositionButton[_ngcontent-pro-c31]{z-index:1}.back-button[_ngcontent-pro-c31], .navbar-brand[_ngcontent-pro-c31]{position:relative;z-index:1}.navbar[_ngcontent-pro-c31]{padding:0 15px}.navbar-header[_ngcontent-pro-c31]{width:22%}.header-back-position-wrapper[_ngcontent-pro-c31]{font-size:0;float:right;margin-top:15px}#header-menu[_ngcontent-pro-c31]{float:left;width:78%;padding-left:15px}.header-template-name-wrapper[_ngcontent-pro-c31]{width:25%;float:left}.header-buttons-wrapper[_ngcontent-pro-c31]{width:75%;display:flex;justify-content:space-between;font-size:0}.esdev-t-export-button[_ngcontent-pro-c31], .esdev-t-share-button[_ngcontent-pro-c31], .loc-label[_ngcontent-pro-c31]{margin-right:15px}.header-menu-controls[_ngcontent-pro-c31]{text-align:center}.header-menu-controls[_ngcontent-pro-c31] > span[_ngcontent-pro-c31]{display:inline-block;margin:0 1px}.header-menu-controls[_ngcontent-pro-c31]   .toggleCodeEditorButton[_ngcontent-pro-c31]{margin-right:15px}.esdev-t-export-button[_ngcontent-pro-c31], .translation-button[_ngcontent-pro-c31]{margin-left:15px}.no-esdev-mr15[_ngcontent-pro-c31]{margin-right:-15px}.loc-label[_ngcontent-pro-c31]{min-width:61px}.loc-label[_ngcontent-pro-c31]   .caret[_ngcontent-pro-c31]{margin-left:5px!important}@media screen and (max-width:1365px){.menu-header-user-dropdowns[_ngcontent-pro-c31]   mb-company-menu[_ngcontent-pro-c31]{display:none}}@media (max-width:1040px){.navbar-header[_ngcontent-pro-c31]{width:100%;float:none}.navbar-left[_ngcontent-pro-c31], .navbar-right[_ngcontent-pro-c31]{float:none!important}.navbar-toggle[_ngcontent-pro-c31]{display:block}.navbar-collapse[_ngcontent-pro-c31]{border-top:1px solid transparent;box-shadow:inset 0 1px 0 hsla(0,0%,100%,.1)}.navbar-fixed-top[_ngcontent-pro-c31]{top:0;border-width:0 0 1px}.navbar-collapse.collapse[_ngcontent-pro-c31]{display:none!important}.navbar-nav[_ngcontent-pro-c31]{float:none!important;margin-top:7.5px}.navbar-nav[_ngcontent-pro-c31] > li[_ngcontent-pro-c31]{float:none}.navbar-nav[_ngcontent-pro-c31] > li[_ngcontent-pro-c31] > a[_ngcontent-pro-c31]{padding-top:10px;padding-bottom:10px}.collapse.in[_ngcontent-pro-c31]{display:block!important}.navbar-icons-hide[_ngcontent-pro-c31]{display:none}.header-back-position-wrapper[_ngcontent-pro-c31]{margin-right:15px}#header-menu[_ngcontent-pro-c31]{width:100%;padding:0}.header-buttons-wrapper[_ngcontent-pro-c31], .header-template-name-wrapper[_ngcontent-pro-c31]{padding:15px 0}}@media (max-width:767px){.navbar-header[_ngcontent-pro-c31]{padding-right:0}#header-menu[_ngcontent-pro-c31]{padding:0!important}.header-template-name-wrapper[_ngcontent-pro-c31]{width:100%;float:none;padding:15px 0}.header-buttons-wrapper[_ngcontent-pro-c31]{width:100%;float:none;padding-bottom:15px}.header-export-redo-undo-wrapper[_ngcontent-pro-c31], .header-menu-controls[_ngcontent-pro-c31]{float:none}.menu-header-user-dropdowns[_ngcontent-pro-c31]{float:none;min-width:224px}.menu-header-user-dropdowns[_ngcontent-pro-c31]   mb-company-menu[_ngcontent-pro-c31]{display:block}.esdev-t-export-button[_ngcontent-pro-c31]{margin-left:0}}@media (max-width:600px){.header-buttons-wrapper[_ngcontent-pro-c31]{display:block}.header-menu-controls[_ngcontent-pro-c31]{text-align:right;margin-bottom:15px;float:left}.header-export-redo-undo-wrapper[_ngcontent-pro-c31]{float:left}.header-template-name-wrapper[_ngcontent-pro-c31]{padding-bottom:0}}.upgrade-link[_ngcontent-pro-c31]{cursor:pointer;text-decoration:underline;color:#fff}.disabled-features-buttons[_ngcontent-pro-c31]{display:inline-block;border-radius:50px;padding:7px;top:-7px;background:#32cb4b2e}.disabled-features-buttons[_ngcontent-pro-c31]   span[_ngcontent-pro-c31]:first-child{margin-right:4px}.disabled-features-buttons[disabled][_ngcontent-pro-c31]{cursor:not-allowed}.disabled-features-buttons[disabled][_ngcontent-pro-c31]   *[_ngcontent-pro-c31]{opacity:.9;pointer-events:none}.disabled-link-input[_ngcontent-pro-c31]{width:auto;display:inline-block;border-radius:50px;padding:7px;position:relative;top:-7px;vertical-align:middle;background:#32cb4b2e;margin-right:15px;cursor:not-allowed}.mr-right-0[_ngcontent-pro-c31]{margin-right:0!important}.top-7px[_ngcontent-pro-c31]{top:-7px}.feature-explanation[_ngcontent-pro-c31]{white-space:nowrap;position:absolute;top:47px;transform:translate(-50%);left:49.8%;background:#32cb4b;color:#fff;padding:0 8px;border-radius:10px;font-weight:700;font-size:11.9px;z-index:7}@media (min-width:1200px) and (max-width:1275px){.hidden-md-extra[_ngcontent-pro-c31]{display:none}}</style><style>[_nghost-pro-c31]{display:block}.header-menu-padding[_ngcontent-pro-c31]{display:flex}.header-menu-breadcrumbs[_ngcontent-pro-c31]{flex:4 0 auto;padding-left:15px}.header-menu-dropdowns[_ngcontent-pro-c31]{flex-basis:570px;padding-right:15px}.help-link[_ngcontent-pro-c31]{max-width:170px}@media screen and (max-width:1200px){.header-menu-dropdowns[_ngcontent-pro-c31]{flex-basis:400px}}@media screen and (max-width:1100px){.header-menu-dropdowns[_ngcontent-pro-c31]{flex-basis:315px}.help-description[_ngcontent-pro-c31]{display:none}}@media screen and (max-width:991px){.header-menu-breadcrumbs[_ngcontent-pro-c31], .header-menu-dropdowns[_ngcontent-pro-c31]{flex-basis:265px}}@media screen and (max-width:767px){.header-menu-padding[_ngcontent-pro-c31]{display:block}.header-menu-breadcrumbs[_ngcontent-pro-c31], .header-menu-dropdowns[_ngcontent-pro-c31]{float:none;width:100%;padding:0}.btn-link[_ngcontent-pro-c31]{float:left;padding-left:0}.help-description[_ngcontent-pro-c31]{display:inline}}</style><style>.loader-c[_ngcontent-pro-c33]{top:50%;left:50%;position:absolute;transform:translate(-50%,-50%)}.settings-container[_ngcontent-pro-c33]{z-index:100}</style><style>[_nghost-pro-c34]{display:block}.header-menu-padding[_ngcontent-pro-c34]{display:flex}.header-menu-breadcrumbs[_ngcontent-pro-c34]{flex:4 0 auto;padding-left:15px}.header-menu-dropdowns[_ngcontent-pro-c34]{flex-basis:570px;padding-right:15px}.help-link[_ngcontent-pro-c34]{max-width:170px}@media screen and (max-width:1200px){.header-menu-dropdowns[_ngcontent-pro-c34]{flex-basis:400px}}@media screen and (max-width:1100px){.header-menu-dropdowns[_ngcontent-pro-c34]{flex-basis:315px}.help-description[_ngcontent-pro-c34]{display:none}}@media screen and (max-width:991px){.header-menu-breadcrumbs[_ngcontent-pro-c34], .header-menu-dropdowns[_ngcontent-pro-c34]{flex-basis:265px}}@media screen and (max-width:767px){.header-menu-padding[_ngcontent-pro-c34]{display:block}.header-menu-breadcrumbs[_ngcontent-pro-c34], .header-menu-dropdowns[_ngcontent-pro-c34]{float:none;width:100%;padding:0}.btn-link[_ngcontent-pro-c34]{float:left;padding-left:0}.help-description[_ngcontent-pro-c34]{display:inline}}</style><style>.settingsPopup[_ngcontent-pro-c34]::-webkit-scrollbar-track{margin-bottom:15px}hr[_ngcontent-pro-c34]{margin-top:15px;margin-bottom:15px}.utm-label[_ngcontent-pro-c34]{padding-left:0}.utm-switcher[_ngcontent-pro-c34]{padding-right:0}.scroll-container[_ngcontent-pro-c34]{position:relative}p.magrin-top[_ngcontent-pro-c34]{margin-top:10px}.sticky-table[_ngcontent-pro-c34]{position:-webkit-sticky;position:sticky;top:0;left:15px;width:100%;z-index:1070;background:#fff}.sticky-table[_ngcontent-pro-c34]:before{left:-15px;right:100%}.sticky-table[_ngcontent-pro-c34]:after, .sticky-table[_ngcontent-pro-c34]:before{content:"";display:block;height:100%;position:absolute;top:0;background:#f6f6f6}.sticky-table[_ngcontent-pro-c34]:after{right:-15px;left:100%}.file-input[_ngcontent-pro-c34]:hover{z-index:0}</style><style>[_nghost-pro-c35]{display:block}.header-menu-padding[_ngcontent-pro-c35]{display:flex}.header-menu-breadcrumbs[_ngcontent-pro-c35]{flex:4 0 auto;padding-left:15px}.header-menu-dropdowns[_ngcontent-pro-c35]{flex-basis:570px;padding-right:15px}.help-link[_ngcontent-pro-c35]{max-width:170px}@media screen and (max-width:1200px){.header-menu-dropdowns[_ngcontent-pro-c35]{flex-basis:400px}}@media screen and (max-width:1100px){.header-menu-dropdowns[_ngcontent-pro-c35]{flex-basis:315px}.help-description[_ngcontent-pro-c35]{display:none}}@media screen and (max-width:991px){.header-menu-breadcrumbs[_ngcontent-pro-c35], .header-menu-dropdowns[_ngcontent-pro-c35]{flex-basis:265px}}@media screen and (max-width:767px){.header-menu-padding[_ngcontent-pro-c35]{display:block}.header-menu-breadcrumbs[_ngcontent-pro-c35], .header-menu-dropdowns[_ngcontent-pro-c35]{float:none;width:100%;padding:0}.btn-link[_ngcontent-pro-c35]{float:left;padding-left:0}.help-description[_ngcontent-pro-c35]{display:inline}}</style><style>.email-error[_ngcontent-pro-c35]{top:53px}.alert[_ngcontent-pro-c35]{margin-bottom:0}.text-explanation[_ngcontent-pro-c35]{margin-bottom:15px!important}.disabled-button[_ngcontent-pro-c35]{pointer-events:none}.hidden-button-caption[_ngcontent-pro-c35]{opacity:0;display:block;height:0}.settingsPopup[_ngcontent-pro-c35]{overflow:hidden!important}.run-test-button[_ngcontent-pro-c35]{max-width:144px;text-overflow:ellipsis;overflow:hidden}.form-control[_ngcontent-pro-c35]{padding-right:35px}.flex-row[_ngcontent-pro-c35]{display:flex;flex-direction:row}</style><link href="./Template editor_files/fonts.css" rel="stylesheet"><style>pixie-editor{display:block;width:100%;height:100%}pixie-editor .overlay{display:none}</style><style>image-editor{display:flex;flex-direction:column;width:100%;height:100%;overflow:hidden;margin:0 auto;position:relative}image-editor .canvas-wrapper{height:calc(100% - 165px);width:100%;display:flex;align-items:center}image-editor .canvas-wrapper .canvas-mask-wrapper{margin:auto}image-editor .canvas-wrapper .canvas-mask-wrapper.empty,image-editor .canvas-wrapper .canvas-mask-wrapper.not-loaded{visibility:hidden}image-editor .canvas-wrapper .canvas-container{margin:auto;box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12)}</style><style>toolbar{display:flex;align-items:center;height:50px;padding:0 20px;color:#fff;background-color:#1976d2;position:relative;z-index:3;box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12)}toolbar .mobile-open-button,toolbar .open-button{position:relative}toolbar .mat-menu-trigger{display:block;position:absolute;left:-1px;bottom:-1px}toolbar>.center{display:flex;align-items:center;justify-content:center;width:140px;text-transform:capitalize}toolbar>.center .current{margin:0 8px}toolbar>.center .value{text-align:center}toolbar>.left{margin-right:auto}toolbar>.right{margin-left:auto}toolbar>.right .toggle-history-button{margin-left:40px}toolbar .drawer-name{font-size:15px}toolbar .status-bar{height:30px;background-color:#1565c0;text-align:center;line-height:30px}toolbar .close-button{margin-left:25px}toolbar .open-button mat-icon{margin-right:5px}toolbar .export-button mat-icon{margin-right:2px}toolbar .invisible{visibility:hidden;pointer-events:none}</style><style>.mat-menu-panel{min-width:112px;max-width:280px;overflow:auto;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 48px);border-radius:4px;outline:0}.mat-menu-panel.ng-animating{pointer-events:none}@media (-ms-high-contrast:active){.mat-menu-panel{outline:solid 1px}}.mat-menu-content:not(:empty){padding-top:8px;padding-bottom:8px}.mat-menu-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:48px;height:48px;padding:0 16px;text-align:left;text-decoration:none;max-width:100%;position:relative}.mat-menu-item::-moz-focus-inner{border:0}.mat-menu-item[disabled]{cursor:default}[dir=rtl] .mat-menu-item{text-align:right}.mat-menu-item .mat-icon{margin-right:16px;vertical-align:middle}.mat-menu-item .mat-icon svg{vertical-align:top}[dir=rtl] .mat-menu-item .mat-icon{margin-left:16px;margin-right:0}@media (-ms-high-contrast:active){.mat-menu-item-highlighted,.mat-menu-item.cdk-keyboard-focused,.mat-menu-item.cdk-program-focused{outline:dotted 1px}}.mat-menu-item-submenu-trigger{padding-right:32px}.mat-menu-item-submenu-trigger::after{width:0;height:0;border-style:solid;border-width:5px 0 5px 5px;border-color:transparent transparent transparent currentColor;content:'';display:inline-block;position:absolute;top:50%;right:16px;transform:translateY(-50%)}[dir=rtl] .mat-menu-item-submenu-trigger{padding-right:16px;padding-left:32px}[dir=rtl] .mat-menu-item-submenu-trigger::after{right:auto;left:16px;transform:rotateY(180deg) translateY(-50%)}button.mat-menu-item{width:100%}.mat-menu-item .mat-menu-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}</style><style>editor-controls{display:block;z-index:2;width:100%;background-color:#fff;height:115px;position:relative;box-shadow:0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12)}editor-controls .drawer,editor-controls navigation-bar{position:absolute;top:0;left:0}editor-controls .bottom-label{display:block;margin-top:5px;text-align:center;font-size:13px;text-transform:capitalize}editor-controls .button-with-image{text-align:center;cursor:pointer;margin:0 5px;padding:5px;width:90px;height:90px;flex-shrink:0;border:1px solid #e0e0e0;border-radius:4px;background-color:#fafafa;transition:box-shadow .3s ease}editor-controls .button-with-image.no-label>img,editor-controls .button-with-image.no-label>mat-icon{width:80px;height:80px}editor-controls .button-with-image:hover{box-shadow:0 3px 3px -2px rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 1px 8px 0 rgba(0,0,0,.12)}editor-controls .button-with-image>.bottom-label{font-size:12px}editor-controls .button-with-image img,editor-controls .button-with-image>svg{display:block;width:60px;height:60px;margin:0 auto}editor-controls .button-with-image mat-icon{width:40px;height:40px;margin:auto}editor-controls .button-with-image .bg-image{width:100%;height:100%}editor-controls .button-with-image .image-container{width:100%;position:relative;border-radius:3px;overflow:hidden}editor-controls .button-with-image .overlay{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;justify-content:center;align-items:center;background-color:rgba(255,255,255,.8);color:#009688;padding-top:5px}editor-controls .button-with-image .overlay mat-icon{width:34px;height:34px;line-height:34px}editor-controls .round-action-button{display:flex;justify-content:center;align-items:center;border:1px solid #e0e0e0;width:60px;height:60px;line-height:60px;border-radius:50%;cursor:pointer}editor-controls .round-action-button mat-icon{width:45px;height:45px}@media only screen and (max-width:768px){editor-controls .round-action-button{width:40px;height:40px;line-height:40px}editor-controls .round-action-button mat-icon{width:25px;height:25px}}editor-controls .slider-container{display:inline-flex;align-items:center;width:100%;max-width:400px;margin:0 30px}editor-controls .slider-container>.slider-label{text-transform:capitalize;white-space:nowrap;font-size:13px;margin-right:10px;padding-left:8px}editor-controls .slider-container>.mat-slider{flex:1 1 auto}editor-controls.position-bottom floating-object-controls{bottom:120px}</style><style>.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0}.mat-button:hover .mat-button-focus-overlay,.mat-stroked-button:hover .mat-button-focus-overlay{opacity:.04}@media (hover:none){.mat-button:hover .mat-button-focus-overlay,.mat-stroked-button:hover .mat-button-focus-overlay{opacity:0}}.mat-button,.mat-flat-button,.mat-icon-button,.mat-stroked-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible}.mat-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner{border:0}.mat-button[disabled],.mat-flat-button[disabled],.mat-icon-button[disabled],.mat-stroked-button[disabled]{cursor:default}.mat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-button.cdk-program-focused .mat-button-focus-overlay,.mat-flat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-flat-button.cdk-program-focused .mat-button-focus-overlay,.mat-icon-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-icon-button.cdk-program-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner{border:0}.mat-raised-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0,0,0);transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1)}.mat-raised-button::-moz-focus-inner{border:0}.mat-raised-button[disabled]{cursor:default}.mat-raised-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-raised-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-raised-button::-moz-focus-inner{border:0}._mat-animation-noopable.mat-raised-button{transition:none;animation:none}.mat-stroked-button{border:1px solid currentColor;padding:0 15px;line-height:34px}.mat-stroked-button .mat-button-focus-overlay,.mat-stroked-button .mat-button-ripple.mat-ripple{top:-1px;left:-1px;right:-1px;bottom:-1px}.mat-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0,0,0);transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab::-moz-focus-inner{border:0}.mat-fab[disabled]{cursor:default}.mat-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-fab{transition:none;animation:none}.mat-fab .mat-button-wrapper{padding:16px 0;display:inline-block;line-height:24px}.mat-mini-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:0;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0,0,0);transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab::-moz-focus-inner{border:0}.mat-mini-fab[disabled]{cursor:default}.mat-mini-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-mini-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-mini-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-mini-fab{transition:none;animation:none}.mat-mini-fab .mat-button-wrapper{padding:8px 0;display:inline-block;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button .mat-icon,.mat-icon-button i{line-height:24px}.mat-button-focus-overlay,.mat-button-ripple.mat-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none;border-radius:inherit}.mat-button-focus-overlay{opacity:0;transition:opacity .2s cubic-bezier(.35,0,.25,1),background-color .2s cubic-bezier(.35,0,.25,1)}._mat-animation-noopable .mat-button-focus-overlay{transition:none}@media (-ms-high-contrast:active){.mat-button-focus-overlay{background-color:#fff}}@media (-ms-high-contrast:black-on-white){.mat-button-focus-overlay{background-color:#000}}.mat-button-ripple-round{border-radius:50%;z-index:1}.mat-button .mat-button-wrapper>*,.mat-fab .mat-button-wrapper>*,.mat-flat-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*,.mat-mini-fab .mat-button-wrapper>*,.mat-raised-button .mat-button-wrapper>*,.mat-stroked-button .mat-button-wrapper>*{vertical-align:middle}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{display:block;font-size:inherit;width:2.5em;height:2.5em}@media (-ms-high-contrast:active){.mat-button,.mat-fab,.mat-flat-button,.mat-icon-button,.mat-mini-fab,.mat-raised-button{outline:solid 1px}}</style><style>.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1,1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}</style><style>navigation-bar{display:block;width:100%;height:100%;padding:0 12px}navigation-bar .scroll-container{display:flex;align-items:center;justify-content:center;width:100%;height:100%;position:relative;overflow-x:auto;overflow-y:hidden;white-space:nowrap}@media only screen and (max-width:1065px){navigation-bar .scroll-container{justify-content:flex-start}navigation-bar .scroll-container .separator{display:none}}navigation-bar button.control-button{text-align:center;margin:0 12px;flex:0 0 auto}navigation-bar button.control-button[disabled]{opacity:.4;cursor:default}navigation-bar button.control-button .mat-icon{width:38px;height:38px;margin:0 auto;color:rgba(0,0,0,.75)}navigation-bar button.control-button .name{display:block;margin-top:2px;text-transform:uppercase;font-size:13px}navigation-bar .separator{height:75px;width:1px;flex:0 0 1px;background-color:rgba(0,0,0,.07);margin:0 20px}</style><style>resize-drawer{display:block}resize-drawer .input-container{display:inline-block;width:auto;margin:0 15px;text-align:center}resize-drawer .input-container.checkbox-container{text-align:left}resize-drawer .input-container input{width:95px;height:45px;border-radius:3px}resize-drawer .input-container label{padding:0}resize-drawer .input-container .mat-checkbox{display:block}resize-drawer .input-container .mat-checkbox:first-of-type{margin-bottom:8px}resize-drawer form{margin:0}@media only screen and (max-width:599.99px){resize-drawer .content{flex-direction:column;justify-content:center}resize-drawer .content>:first-child,resize-drawer .content>:last-child{margin:auto}resize-drawer .input-container .percentages-checkbox{display:none}resize-drawer .input-container>.aspect-ratio-checkbox{margin-bottom:0}}</style><style>@keyframes mat-checkbox-fade-in-background{0%{opacity:0}50%{opacity:1}}@keyframes mat-checkbox-fade-out-background{0%,50%{opacity:1}100%{opacity:0}}@keyframes mat-checkbox-unchecked-checked-checkmark-path{0%,50%{stroke-dashoffset:22.91026}50%{animation-timing-function:cubic-bezier(0,0,.2,.1)}100%{stroke-dashoffset:0}}@keyframes mat-checkbox-unchecked-indeterminate-mixedmark{0%,68.2%{transform:scaleX(0)}68.2%{animation-timing-function:cubic-bezier(0,0,0,1)}100%{transform:scaleX(1)}}@keyframes mat-checkbox-checked-unchecked-checkmark-path{from{animation-timing-function:cubic-bezier(.4,0,1,1);stroke-dashoffset:0}to{stroke-dashoffset:-22.91026}}@keyframes mat-checkbox-checked-indeterminate-checkmark{from{animation-timing-function:cubic-bezier(0,0,.2,.1);opacity:1;transform:rotate(0)}to{opacity:0;transform:rotate(45deg)}}@keyframes mat-checkbox-indeterminate-checked-checkmark{from{animation-timing-function:cubic-bezier(.14,0,0,1);opacity:0;transform:rotate(45deg)}to{opacity:1;transform:rotate(360deg)}}@keyframes mat-checkbox-checked-indeterminate-mixedmark{from{animation-timing-function:cubic-bezier(0,0,.2,.1);opacity:0;transform:rotate(-45deg)}to{opacity:1;transform:rotate(0)}}@keyframes mat-checkbox-indeterminate-checked-mixedmark{from{animation-timing-function:cubic-bezier(.14,0,0,1);opacity:1;transform:rotate(0)}to{opacity:0;transform:rotate(315deg)}}@keyframes mat-checkbox-indeterminate-unchecked-mixedmark{0%{animation-timing-function:linear;opacity:1;transform:scaleX(1)}100%,32.8%{opacity:0;transform:scaleX(0)}}.mat-checkbox-background,.mat-checkbox-frame{top:0;left:0;right:0;bottom:0;position:absolute;border-radius:2px;box-sizing:border-box;pointer-events:none}.mat-checkbox{transition:background .4s cubic-bezier(.25,.8,.25,1),box-shadow 280ms cubic-bezier(.4,0,.2,1);cursor:pointer;-webkit-tap-highlight-color:transparent}._mat-animation-noopable.mat-checkbox{transition:none;animation:none}.mat-checkbox .mat-ripple-element:not(.mat-checkbox-persistent-ripple){opacity:.16}.mat-checkbox-layout{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:inherit;align-items:baseline;vertical-align:middle;display:inline-flex;white-space:nowrap}.mat-checkbox-label{-webkit-user-select:auto;-moz-user-select:auto;-ms-user-select:auto;user-select:auto}.mat-checkbox-inner-container{display:inline-block;height:16px;line-height:0;margin:auto;margin-right:8px;order:0;position:relative;vertical-align:middle;white-space:nowrap;width:16px;flex-shrink:0}[dir=rtl] .mat-checkbox-inner-container{margin-left:8px;margin-right:auto}.mat-checkbox-inner-container-no-side-margin{margin-left:0;margin-right:0}.mat-checkbox-frame{background-color:transparent;transition:border-color 90ms cubic-bezier(0,0,.2,.1);border-width:2px;border-style:solid}._mat-animation-noopable .mat-checkbox-frame{transition:none}@media (-ms-high-contrast:active){.mat-checkbox.cdk-keyboard-focused .mat-checkbox-frame{border-style:dotted}}.mat-checkbox-background{align-items:center;display:inline-flex;justify-content:center;transition:background-color 90ms cubic-bezier(0,0,.2,.1),opacity 90ms cubic-bezier(0,0,.2,.1)}._mat-animation-noopable .mat-checkbox-background{transition:none}.mat-checkbox-persistent-ripple{width:100%;height:100%;transform:none}.mat-checkbox-inner-container:hover .mat-checkbox-persistent-ripple{opacity:.04}.mat-checkbox.cdk-keyboard-focused .mat-checkbox-persistent-ripple{opacity:.12}.mat-checkbox-persistent-ripple,.mat-checkbox.mat-disabled .mat-checkbox-inner-container:hover .mat-checkbox-persistent-ripple{opacity:0}.mat-checkbox-checkmark{top:0;left:0;right:0;bottom:0;position:absolute;width:100%}.mat-checkbox-checkmark-path{stroke-dashoffset:22.91026;stroke-dasharray:22.91026;stroke-width:2.13333px}.mat-checkbox-mixedmark{width:calc(100% - 6px);height:2px;opacity:0;transform:scaleX(0) rotate(0);border-radius:2px}@media (-ms-high-contrast:active){.mat-checkbox-mixedmark{height:0;border-top:solid 2px;margin-top:2px}}.mat-checkbox-label-before .mat-checkbox-inner-container{order:1;margin-left:8px;margin-right:auto}[dir=rtl] .mat-checkbox-label-before .mat-checkbox-inner-container{margin-left:auto;margin-right:8px}.mat-checkbox-checked .mat-checkbox-checkmark{opacity:1}.mat-checkbox-checked .mat-checkbox-checkmark-path{stroke-dashoffset:0}.mat-checkbox-checked .mat-checkbox-mixedmark{transform:scaleX(1) rotate(-45deg)}.mat-checkbox-indeterminate .mat-checkbox-checkmark{opacity:0;transform:rotate(45deg)}.mat-checkbox-indeterminate .mat-checkbox-checkmark-path{stroke-dashoffset:0}.mat-checkbox-indeterminate .mat-checkbox-mixedmark{opacity:1;transform:scaleX(1) rotate(0)}.mat-checkbox-unchecked .mat-checkbox-background{background-color:transparent}.mat-checkbox-disabled{cursor:default}.mat-checkbox-anim-unchecked-checked .mat-checkbox-background{animation:180ms linear 0s mat-checkbox-fade-in-background}.mat-checkbox-anim-unchecked-checked .mat-checkbox-checkmark-path{animation:180ms linear 0s mat-checkbox-unchecked-checked-checkmark-path}.mat-checkbox-anim-unchecked-indeterminate .mat-checkbox-background{animation:180ms linear 0s mat-checkbox-fade-in-background}.mat-checkbox-anim-unchecked-indeterminate .mat-checkbox-mixedmark{animation:90ms linear 0s mat-checkbox-unchecked-indeterminate-mixedmark}.mat-checkbox-anim-checked-unchecked .mat-checkbox-background{animation:180ms linear 0s mat-checkbox-fade-out-background}.mat-checkbox-anim-checked-unchecked .mat-checkbox-checkmark-path{animation:90ms linear 0s mat-checkbox-checked-unchecked-checkmark-path}.mat-checkbox-anim-checked-indeterminate .mat-checkbox-checkmark{animation:90ms linear 0s mat-checkbox-checked-indeterminate-checkmark}.mat-checkbox-anim-checked-indeterminate .mat-checkbox-mixedmark{animation:90ms linear 0s mat-checkbox-checked-indeterminate-mixedmark}.mat-checkbox-anim-indeterminate-checked .mat-checkbox-checkmark{animation:.5s linear 0s mat-checkbox-indeterminate-checked-checkmark}.mat-checkbox-anim-indeterminate-checked .mat-checkbox-mixedmark{animation:.5s linear 0s mat-checkbox-indeterminate-checked-mixedmark}.mat-checkbox-anim-indeterminate-unchecked .mat-checkbox-background{animation:180ms linear 0s mat-checkbox-fade-out-background}.mat-checkbox-anim-indeterminate-unchecked .mat-checkbox-mixedmark{animation:.3s linear 0s mat-checkbox-indeterminate-unchecked-mixedmark}.mat-checkbox-input{bottom:0;left:50%}.mat-checkbox .mat-checkbox-ripple{position:absolute;left:calc(50% - 20px);top:calc(50% - 20px);height:40px;width:40px;z-index:1;pointer-events:none}</style><style>.mat-snack-bar-container{border-radius:4px;box-sizing:border-box;display:block;margin:24px;max-width:33vw;min-width:344px;padding:14px 16px;min-height:48px;transform-origin:center}@media (-ms-high-contrast:active){.mat-snack-bar-container{border:solid 1px}}.mat-snack-bar-handset{width:100%}.mat-snack-bar-handset .mat-snack-bar-container{margin:8px;max-width:100%;min-width:0;width:100%}</style><style>.mat-simple-snackbar{display:flex;justify-content:space-between;align-items:center;height:100%;line-height:20px;opacity:1}.mat-simple-snackbar-action{flex-shrink:0;margin:-8px -8px -8px 8px}.mat-simple-snackbar-action button{max-height:36px;min-width:0}[dir=rtl] .mat-simple-snackbar-action{margin-left:-8px;margin-right:8px}</style><style>.mat-tooltip-panel{pointer-events:none!important}.mat-tooltip{color:#fff;border-radius:4px;margin:14px;max-width:250px;padding-left:8px;padding-right:8px;overflow:hidden;text-overflow:ellipsis}@media (-ms-high-contrast:active){.mat-tooltip{outline:solid 1px}}.mat-tooltip-handset{margin:24px;padding-left:16px;padding-right:16px}</style></head>
+<body class="full-height authenticated-indent"><div class="esdev-app esdev-popup-pixie-editor"><pixie-editor style="position: fixed; opacity: 0; display: none;" class="ng-tns-c0-0 ng-trigger ng-trigger-editorVisible theme-light mode-overlay" ng-version="7.2.4"><image-editor class="ng-tns-c0-0"><!----><toolbar class="ng-star-inserted" style=""><!----><div class="left ng-star-inserted"><button class="open-button mat-button" mat-button=""><span class="mat-button-wrapper"><span aria-haspopup="true" class="mat-menu-trigger"></span><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" svgicon="photo-library" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z"></path></svg></mat-icon><span class="name" trans="" translate-key="Open">Open</span></span><div class="mat-button-ripple mat-ripple" matripple=""></div><div class="mat-button-focus-overlay"></div></button><button class="export-button mat-button" mat-button=""><span class="mat-button-wrapper"><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" svgicon="file-download" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"></path></svg></mat-icon><span class="name" trans="" translate-key="Save">Save</span></span><div class="mat-button-ripple mat-ripple" matripple=""></div><div class="mat-button-focus-overlay"></div></button></div><!----><div class="center ng-star-inserted"><button mat-icon-button="" class="mat-icon-button"><span class="mat-button-wrapper"><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" svgicon="remove" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M19 13H5v-2h14v2z"></path></svg></mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div><div class="mat-button-focus-overlay"></div></button><div class="current"><div trans="" translate-key="Zoom">Zoom</div><div class="value">100%</div></div><button mat-icon-button="" class="mat-icon-button"><span class="mat-button-wrapper"><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" svgicon="add" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path></svg></mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div><div class="mat-button-focus-overlay"></div></button></div><div class="right ng-star-inserted"><button mat-icon-button="" class="mat-icon-button" aria-describedby="cdk-describedby-message-0" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="mat-button-wrapper"><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" svgicon="undo" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"></path></svg></mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div><div class="mat-button-focus-overlay"></div></button><button mat-icon-button="" class="mat-icon-button" aria-describedby="cdk-describedby-message-1" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);" disabled=""><span class="mat-button-wrapper"><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" svgicon="redo" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M18.4 10.6C16.55 8.99 14.15 8 11.5 8c-4.65 0-8.58 3.03-9.96 7.22L3.9 16a8.002 8.002 0 0 1 7.6-5.5c1.95 0 3.73.72 5.12 1.88L13 16h9V7l-3.6 3.6z"></path></svg></mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div><div class="mat-button-focus-overlay"></div></button><button class="toggle-history-button mat-icon-button" mat-icon-button="" aria-describedby="cdk-describedby-message-2" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="mat-button-wrapper"><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" svgicon="history" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M13 3a9 9 0 0 0-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42A8.954 8.954 0 0 0 13 21a9 9 0 0 0 0-18zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"></path></svg></mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div><div class="mat-button-focus-overlay"></div></button><button mat-icon-button="" class="mat-icon-button" aria-describedby="cdk-describedby-message-3" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="mat-button-wrapper"><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" svgicon="layers" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"></path></svg></mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div><div class="mat-button-focus-overlay"></div></button><!----><button class="close-button mat-icon-button ng-star-inserted" mat-icon-button="" aria-describedby="cdk-describedby-message-4" cdk-describedby-host="" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><span class="mat-button-wrapper"><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" svgicon="close" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div><div class="mat-button-focus-overlay"></div></button><!----></div><!----><mat-menu class="ng-tns-c6-1"><!----></mat-menu></toolbar><!----><editor-controls class="position-top ng-tns-c3-2 ng-star-inserted" style=""><!----><!----><!----><navigation-bar class="ng-tns-c3-2 ng-trigger ng-trigger-controlsAnimation ng-star-inserted" style=""><div class="scroll-container scroll-container-x" customscrollbar=""><!----><!----><!----><!----><button class="no-style control-button ng-star-inserted" style=""><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M15 5c-1.293 0-2.395.844-2.813 2H4v2h8.188c.417 1.156 1.519 2 2.812 2s2.395-.844 2.813-2H28V7H17.812C17.395 5.844 16.294 5 15 5zm0 2c.563 0 1 .438 1 1 0 .563-.438 1-1 1-.563 0-1-.438-1-1 0-.563.438-1 1-1zm7 6c-1.293 0-2.395.844-2.813 2H4v2h15.188c.417 1.156 1.519 2 2.812 2s2.395-.844 2.813-2H28v-2h-3.188c-.417-1.156-1.519-2-2.812-2zm0 2c.563 0 1 .438 1 1 0 .563-.438 1-1 1-.563 0-1-.438-1-1 0-.563.438-1 1-1zm-11 6c-1.293 0-2.395.844-2.813 2H4v2h4.188c.417 1.156 1.519 2 2.812 2s2.395-.844 2.813-2H28v-2H13.812c-.417-1.156-1.519-2-2.812-2zm0 2c.563 0 1 .438 1 1 0 .563-.438 1-1 1-.563 0-1-.438-1-1 0-.563.438-1 1-1z"></path></svg></mat-icon><span class="name" trans="">filter</span></button><!----><!----><!----><div class="separator ng-star-inserted" style=""></div><!----><!----><!----><!----><!----><button class="no-style control-button ng-star-inserted" style=""><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M5 5v2h2V5zm4 0v2h2V5zm4 0v2h2V5zm4 0v2h2V5zm4 0v2h2V5zm4 0v2h2V5zM5 9v2h2V9zm20 0v2h2V9zm-11 2v2h3.563l-4 4H5v10h10v-8.563l4-4V18h2v-7zm-9 2v2h2v-2zm20 0v2h2v-2zm0 4v2h2v-2zM7 19h6v6H7zm18 2v2h2v-2zm-8 4v2h2v-2zm4 0v2h2v-2zm4 0v2h2v-2z"></path></svg></mat-icon><span class="name" trans="">resize</span></button><!----><!----><!----><!----><button class="no-style control-button ng-star-inserted" style=""><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M8 4v4H4v2h4v14h14v4h2v-4h4v-2H11.437L22 11.437V21h2V9.437l3.719-3.718L26.28 4.28 22.563 8H11v2h9.563L10 20.563V4z"></path></svg></mat-icon><span class="name" trans="">crop</span></button><!----><!----><!----><!----><button class="no-style control-button ng-star-inserted" style=""><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M16 4C9.383 4 4 9.383 4 16s5.383 12 12 12 12-5.383 12-12S22.617 4 16 4zm0 2c5.535 0 10 4.465 10 10s-4.465 10-10 10S6 21.535 6 16 10.465 6 16 6zm0 4c-2.969 0-5.426 2.168-5.906 5h2.062c.446-1.723 1.985-3 3.844-3 1.105 0 2.094.457 2.813 1.188L17 15h5v-5l-1.781 1.781C19.133 10.695 17.652 10 16 10zm-6 7v5l1.781-1.781C12.867 21.305 14.348 22 16 22c2.969 0 5.426-2.168 5.906-5h-2.062c-.446 1.723-1.985 3-3.844 3a3.927 3.927 0 0 1-2.813-1.188L15 17z"></path></svg></mat-icon><span class="name" trans="">transform</span></button><!----><!----><!----><div class="separator ng-star-inserted" style=""></div><!----><!----><!----><!----><!----><button class="no-style control-button ng-star-inserted" style=""><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M23.906 3.969A4.097 4.097 0 0 0 21 5.188L5.187 21l-.062.313-1.094 5.5-.312 1.468 1.469-.312 5.5-1.094.312-.063L26.813 11a4.075 4.075 0 0 0 0-5.813 4.097 4.097 0 0 0-2.907-1.218zm0 1.906c.504 0 1.012.23 1.5.719.973.972.973 2.027 0 3l-.718.687-2.97-2.969.688-.718c.489-.489.996-.719 1.5-.719zm-3.593 2.844l2.968 2.969L11.188 23.78a6.813 6.813 0 0 0-2.97-2.968zM6.938 22.438a4.734 4.734 0 0 1 2.625 2.625l-3.282.656z"></path></svg></mat-icon><span class="name" trans="">draw</span></button><!----><!----><!----><!----><button class="no-style control-button ng-star-inserted" style=""><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M15 6L8 26h2l2.098-6h4.992A7.918 7.918 0 0 0 16 24c0 4.398 3.602 8 8 8s8-3.602 8-8-3.602-8-8-8c-1.16 0-2.258.254-3.254.703L17 6zm1 2.86l3.094 8.84a8.616 8.616 0 0 0-.36.3h-5.933zM24 18c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6zm-1 2v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg></mat-icon><span class="name" trans="">text</span></button><!----><!----><!----><!----><button class="no-style control-button ng-star-inserted" style=""><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M14 4a2 2 0 0 0-2 2v.063L6.937 9.25A2.009 2.009 0 0 0 6 9a2 2 0 0 0-2 2c0 .738.402 1.371 1 1.719V24.28c-.598.348-1 .98-1 1.719a2 2 0 0 0 2 2c.738 0 1.371-.402 1.719-1H20.28c.348.598.98 1 1.719 1a2 2 0 0 0 2-2c0-.398-.11-.781-.313-1.094L26.125 20a2.005 2.005 0 0 0 .25-3.969l-1.906-5.718C24.785 9.957 25 9.511 25 9a2 2 0 0 0-2-2c-.512 0-.957.215-1.313.531L15.97 5.594A2.012 2.012 0 0 0 14 4zm1.313 3.5l5.718 1.875c.153.805.79 1.441 1.594 1.594l1.906 5.687A1.99 1.99 0 0 0 24 18c0 .414.129.805.344 1.125L21.875 24a1.988 1.988 0 0 0-1.594 1H7.72a1.981 1.981 0 0 0-.72-.719V12.72c.598-.348 1-.98 1-1.719v-.063l5.063-3.187c.28.148.597.25.937.25.504 0 .96-.191 1.313-.5z"></path></svg></mat-icon><span class="name" trans="">shapes</span></button><!----><!----><!----><!----><button class="no-style control-button ng-star-inserted" style=""><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M16 4C9.383 4 4 9.383 4 16s5.383 12 12 12 12-5.383 12-12S22.617 4 16 4zm0 2c5.535 0 10 4.465 10 10s-4.465 10-10 10S6 21.535 6 16 10.465 6 16 6zm-4.5 6a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm9 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-9.688 7l-1.718 1c1.383 2.387 3.953 4 6.906 4s5.523-1.613 6.906-4l-1.718-1A5.977 5.977 0 0 1 16 22a5.977 5.977 0 0 1-5.188-3z"></path></svg></mat-icon><span class="name" trans="">stickers</span></button><!----><!----><!----><!----><button class="no-style control-button ng-star-inserted" style=""><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M2 5v22h28V5zm2 2h24v18H4zm2 2v14h20V9zm2 2h16v10H8z"></path></svg></mat-icon><span class="name" trans="">frame</span></button><!----><!----><!----><div class="separator ng-star-inserted" style=""></div><!----><!----><!----><!----><!----><button class="no-style control-button ng-star-inserted" style=""><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M8 6c-2.746 0-5 2.254-5 5v10c0 2.746 2.254 5 5 5h16c2.746 0 5-2.254 5-5V11c0-2.746-2.254-5-5-5zm0 2h16a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3z"></path></svg></mat-icon><span class="name" trans="">corners</span></button><!----><!----><!----><!----><button class="no-style control-button ng-star-inserted" style=""><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M11.313 3.281L9.905 4.72l1.782 1.78-6.906 6.906a3.063 3.063 0 0 0 0 4.313l.063.062 6.343 6.313a3.063 3.063 0 0 0 4.313 0l7.594-7.594.718-.688-9.718-9.718-.781-.813-.22-.187zm1.812 4.656L21 15.813l-6.906 6.876a1.054 1.054 0 0 1-1.5 0L6.219 16.28a1.017 1.017 0 0 1 0-1.468zM25 19.25l-.813 1.188s-.539.753-1.062 1.656c-.262.453-.508.926-.719 1.406-.21.48-.406.922-.406 1.5 0 1.645 1.355 3 3 3s3-1.355 3-3c0-.578-.195-1.02-.406-1.5-.211-.48-.457-.953-.719-1.406-.523-.903-1.063-1.657-1.063-1.657zm0 3.625c.066.11.059.102.125.219.238.41.492.847.656 1.218.164.372.219.715.219.688 0 .555-.445 1-1 1-.555 0-1-.445-1-1 0 .027.055-.316.219-.688.164-.37.418-.808.656-1.218.066-.117.059-.11.125-.219z"></path></svg></mat-icon><span class="name" trans="">Background</span></button><!----><!----><!----><!----><button class="no-style control-button ng-star-inserted" disabled="" style=""><mat-icon class="mat-icon notranslate mat-icon-no-color" role="img" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fit="" height="100%" width="100%" preserveAspectRatio="xMidYMid meet" focusable="false"><path d="M16 4.594l-.719.687-5 5 1.438 1.438L15 8.438V19c0 2.773-2.227 5-5 5H5v2h5c3.855 0 7-3.145 7-7V8.437l3.281 3.282 1.438-1.438-5-5zm1.969 17.343a8.286 8.286 0 0 1-1 1.907A6.978 6.978 0 0 0 22 26h5v-2h-5a4.982 4.982 0 0 1-4.031-2.063z"></path></svg></mat-icon><span class="name" trans="">merge</span></button><!----></div></navigation-bar><div class="tool-panel-container ng-tns-c3-2 ng-star-inserted hidden"><button class="cancel-button mat-raised-button" mat-raised-button="" trans=""><span class="mat-button-wrapper"><!----><span trans="" class="ng-tns-c3-2 ng-star-inserted" style="">Close</span><!----></span><div class="mat-button-ripple mat-ripple" matripple=""></div><div class="mat-button-focus-overlay"></div></button><div class="drawer-wrapper scroll-container-x" customscrollbar=""><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----><!----></div><button class="apply-button mat-raised-button mat-accent" color="accent" mat-raised-button="" trans="" disabled=""><span class="mat-button-wrapper">Apply</span><div class="mat-button-ripple mat-ripple" matripple=""></div><div class="mat-button-focus-overlay"></div></button></div><!----><!----></editor-controls><div backgroundimage="images/viewport-bg.png" class="canvas-wrapper" style="background-image: url(&quot;https://my.stripo.email/static/assets/imageeditor/assets/images/viewport-bg.png&quot;);"><div backgroundimage="images/canvas-bg.png" class="canvas-mask-wrapper" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); background-image: url(&quot;https://my.stripo.email/static/assets/imageeditor/assets/images/canvas-bg.png&quot;);"><div class="canvas-container" style="width: 125px; height: 29px; position: relative; user-select: none;"><canvas id="pixie-canvas" class="lower-canvas" width="125" height="29" style="position: absolute; width: 125px; height: 29px; left: 0px; top: 0px; touch-action: none; user-select: none;"></canvas><canvas class="upper-canvas " width="125" height="29" style="position: absolute; width: 125px; height: 29px; left: 0px; top: 0px; touch-action: none; user-select: none; cursor: default;"></canvas></div></div></div><!----><div class="editor-overlay-container pixie-overlay-container"></div></image-editor><div class="overlay"></div><div class="loader"></div></pixie-editor></div><div class="esdev-app esdev-custom-popup-container"></div><div class="esdev-app esdev-datepicker-container" style="position: relative;"></div><div class="esdev-app esdev-popup-container"></div>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGD7HVJ" height="0" width="0"
+          style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script src="./Template editor_files/firebase-app.js.下載"></script>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","378780519466271");fbq("set","agent","tmgoogletagmanager","378780519466271");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=378780519466271&amp;ev=PageView&amp;noscript=1"></noscript>
+<script type="text/javascript" id="" src="./Template editor_files/pa-5d6f91d73a70310008000331.js.下載"></script><meta name="google-site-verification" content="9YbprnZ1-2Bh59z49TDo8nSrwzRvj1dXW3w1Nvmxlxw">
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","378780519466271");fbq("track","PageView");fbq("track","CompleteRegistration");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=378780519466271&amp;ev=PageView&amp;noscript=1"></noscript>
+
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","378780519466271");fbq("track","PageView");fbq("track","Subscribe");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=378780519466271&amp;ev=PageView&amp;noscript=1"></noscript>
+<meta name="p:domain_verify" content="459bfe9979740e25dcca8315055e5f9d">
+<script src="./Template editor_files/firebase-auth.js.下載"></script>
+<script src="./Template editor_files/party.min.js.下載"></script>
+
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      appId: (window.location.hostname.indexOf('staging') >=0 || window.location.hostname.indexOf('devel') >= 0) ? '226771407798774' : '220581981751305',
+      xfbml: true,
+      version: 'v4.0'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+      return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+</script>
+<script src="./Template editor_files/platform.js.下載" gapi_processed="true"></script>
+<script>(function () {
+  var w = window;
+  var ic = w.Intercom;
+  if (typeof ic === "function") {
+    ic('reattach_activator');
+    ic('update', intercomSettings);
+  } else {
+    var d = document;
+    var i = function () {
+      i.c(arguments)
+    };
+    i.q = [];
+    i.c = function (args) {
+      i.q.push(args)
+    };
+    w.Intercom = i;
+
+    function l() {
+      var s = d.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = 'https://widget.intercom.io/widget/b1m243ec';
+      var x = d.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+      window.intercomSettings = {};
+      w.Intercom('onHide', function () {
+        w.focus()
+      });
+    }
+
+    if (w.attachEvent) {
+      w.attachEvent('onload', l);
+    } else {
+      w.addEventListener('load', l, false);
+    }
+  }
+})()
+</script>
+<script src="./Template editor_files/saved_resource"></script>
+<script>
+  var stripeElements;
+  var stripePayments;
+
+</script>
+<script> var global = window; </script>
+
+<mb-root _nghost-pro-c0="" ng-version="11.2.14"><!---->
+<!----><ui-view _ngcontent-pro-c0="" mb-indent="">
+    <!----><mb-main-container><mb-dialog-container></mb-dialog-container>
+<ui-view name="notifications">
+    <!----><mb-notifications _nghost-pro-c1=""><div _ngcontent-pro-c1="" class="notification-zone">
+  <!---->
+</div>
+</mb-notifications>
+    <!---->
+  </ui-view>
+<ui-view name="chatStub">
+    <!----><mb-chat-stub _nghost-pro-c2=""><!----><div _ngcontent-pro-c2="" class="chat-zone chat-right" style="bottom: 5px;">
+  <img _ngcontent-pro-c2="" class="e2e-chat-stub" src="./Template editor_files/intercom.png">
+</div>
+</mb-chat-stub>
+    <!---->
+  </ui-view>
+<ui-view name="header">
+    <!----><mb-editor-header _nghost-pro-c31="" class="ng-star-inserted"><mb-activate-reminder _ngcontent-pro-c31="" _nghost-pro-c4=""><!---->
+</mb-activate-reminder>
+
+<nav _ngcontent-pro-c31="" class="navbar navbar-default navbar-fixed-top">
+    <div _ngcontent-pro-c31="" class="navbar-header">
+        <button _ngcontent-pro-c31="" aria-expanded="false" class="navbar-toggle btn-round collapsed" data-target="#header-menu" data-toggle="collapse" type="button">
+            <span _ngcontent-pro-c31="" class="sr-only">Toggle navigation</span>
+            <span _ngcontent-pro-c31="" class="icon-bar"></span>
+            <span _ngcontent-pro-c31="" class="icon-bar"></span>
+            <span _ngcontent-pro-c31="" class="icon-bar"></span>
+        </button>
+        <a _ngcontent-pro-c31="" class="navbar-brand" href="https://my.stripo.email/cabinet/#/templates/"></a>
+
+        <div _ngcontent-pro-c31="" class="header-back-position-wrapper">
+            <button _ngcontent-pro-c31="" class="btn btn-default btn-round back-button esdev-mr15" container="body" placement="bottom">
+                <span _ngcontent-pro-c31="" class="es-icon-back"></span>
+            </button>
+
+            <div _ngcontent-pro-c31="" class="btn-group pull-right" mb-click-outside="" id="settingsPanelControlsBlock">
+                <button _ngcontent-pro-c31="" class="btn btn-default esdev-option-panel-toggle hideSettingsPanelButton active">
+          <span _ngcontent-pro-c31="" class="es-icon-sidebar settings-panel-status-icon es-icon-sidebar-left">
+          </span>
+                    <span _ngcontent-pro-c31="" class="tooltip-placeholder" container="body" placement="bottom">
+          </span>
+                </button>
+                <button _ngcontent-pro-c31="" aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle toggleSettingPanelPositionButton" data-toggle="dropdown" type="button">
+                    <span _ngcontent-pro-c31="" class="caret"></span>
+                </button>
+                <ul _ngcontent-pro-c31="" class="dropdown-menu">
+                    <li _ngcontent-pro-c31="">
+                        <a _ngcontent-pro-c31="" class="panel-position-option-left" href="https://my.stripo.email/cabinet/#">
+                            <span _ngcontent-pro-c31="" class="es-icon-sidebar"></span>
+                            <span _ngcontent-pro-c31="" translate="">Settings panel is on the left</span>
+                        </a>
+                    </li>
+                    <li _ngcontent-pro-c31="">
+                        <a _ngcontent-pro-c31="" class="panel-position-option-right" href="https://my.stripo.email/cabinet/#">
+                            <span _ngcontent-pro-c31="" class="es-icon-sidebar-right"></span>
+                            <span _ngcontent-pro-c31="" translate="">Settings panel is on the right</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div _ngcontent-pro-c31="" class="navbar-icons-hide navbar-collapse header-menu" id="header-menu">
+        <div _ngcontent-pro-c31="" class="input-group header-template-name-wrapper">
+            <form _ngcontent-pro-c31="" novalidate="" class="ng-untouched ng-pristine ng-valid">
+                <!----><input _ngcontent-pro-c31="" class="email-name-input form-control letter-name templateNameInput ng-untouched ng-pristine ng-valid ng-star-inserted" formcontrolname="name" maxlength="200" type="text" tabindex="null" placeholder="">
+            </form>
+            <div _ngcontent-pro-c31="" class="input-group-btn">
+                <button _ngcontent-pro-c31="" class="btn btn-default" container="body" placement="bottom" type="button" tabindex="null" id="headerSaveButton">
+                    <span _ngcontent-pro-c31="" class="es-icon-upload"></span>
+                </button>
+
+                <div _ngcontent-pro-c31="" class="btn-group" mb-click-outside="" role="group">
+
+                    <button _ngcontent-pro-c31="" aria-expanded="false" aria-haspopup="true" class="btn btn-default dropdown-toggle saveOptionsButton" data-toggle="dropdown" type="button">
+                        <span _ngcontent-pro-c31="" class="caret"></span>
+                    </button>
+                    <ul _ngcontent-pro-c31="" class="dropdown-menu dropdown-menu-right">
+                        <!----><li _ngcontent-pro-c31="" class="ng-star-inserted">
+                            <a _ngcontent-pro-c31="" href="https://my.stripo.email/cabinet/#" tabindex="null" class="saveAndExitButton">
+                                <!---->
+                                Update template and exit
+                            </a>
+                        </li><li _ngcontent-pro-c31="" class="ng-star-inserted">
+                            <a _ngcontent-pro-c31="" href="https://my.stripo.email/cabinet/#" tabindex="null" class="saveAsEmail">
+                                <!---->
+                                Save as a new template
+                            </a>
+                        </li><li _ngcontent-pro-c31="" class="ng-star-inserted">
+                            <a _ngcontent-pro-c31="" href="https://my.stripo.email/cabinet/#" tabindex="null" class="leaveEditor">
+                                <!---->
+                                Leave template editor
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div _ngcontent-pro-c31="" class="header-buttons-wrapper">
+            <div _ngcontent-pro-c31="" class="header-export-redo-undo-wrapper">
+                <!---->
+                <button _ngcontent-pro-c31="" class="btn btn-success esdev-t-export-button pull-left esdev-mr15" tabindex="null">
+                    <span _ngcontent-pro-c31="" class="es-icon-in-new-tab"></span>
+                    <span _ngcontent-pro-c31="" class="hidden-md hidden-sm hidden-xs"> Export</span>
+                    <!---->
+                </button>
+                <span _ngcontent-pro-c31="" class="disabled-link-input">
+                    <button _ngcontent-pro-c31="" class="btn btn-default esdev-t-share-button pull-left mr-right-0" tabindex="-1" style="pointer-events: none; cursor: not-allowed; opacity: 0.6;">
+                        <span _ngcontent-pro-c31="" class="es-icon-share"></span>
+                        <span _ngcontent-pro-c31="" class="hidden-md-extra hidden-md hidden-sm hidden-xs"> Share</span>
+                        <!---->
+                    </button>
+                  <!----><span _ngcontent-pro-c31="" class="small text-muted feature-explanation ng-star-inserted">Available for paid plans only. <a _ngcontent-pro-c31="" class="upgrade-link" translate="">Upgrade</a></span>
+                </span>
+                <div _ngcontent-pro-c31="" class="btn-group top-7px" role="group">
+                    <button _ngcontent-pro-c31="" class="btn btn-default" container="body" placement="bottom" type="button" tabindex="null" id="headerUndoButton">
+                        <span _ngcontent-pro-c31="" class="es-icon-reply"></span>
+                    </button>
+                    <button _ngcontent-pro-c31="" class="btn btn-default show-revision-panel" container="body" placement="bottom" style="padding:6px;" type="button" tabindex="null" id="changeHistoryButton">
+                        <span _ngcontent-pro-c31="" class="es-icon-time-machine"></span>
+                    </button>
+                    <button _ngcontent-pro-c31="" class="btn btn-default" container="body" placement="bottom" type="button" tabindex="null" id="headerRedoButton" disabled="disabled">
+                        <span _ngcontent-pro-c31="" class="es-icon-forward"></span>
+                    </button>
+                </div>
+            </div>
+            <div _ngcontent-pro-c31="" class="header-menu-controls">
+              <span _ngcontent-pro-c31="" class="toggleCodeEditorButton" container="body" placement="bottom" tabindex="null" id="headerCodeEditorButton">
+                <button _ngcontent-pro-c31="" class="btn btn-default btn-round">
+                  <span _ngcontent-pro-c31="" class="es-icon-code"></span>
+                </button>
+              </span>
+              <span _ngcontent-pro-c31="" class="esdev-t-emailsettings" container="body" placement="bottom" tabindex="null">
+                <button _ngcontent-pro-c31="" class="btn btn-default btn-round">
+                  <span _ngcontent-pro-c31="" class="es-icon-cog"></span>
+                </button>
+              </span>
+              <span _ngcontent-pro-c31="" container="body" placement="bottom" style="display: inline-block;" tabindex="null" id="webPreviewButton">
+                <button _ngcontent-pro-c31="" class="btn btn-default btn-round">
+                  <span _ngcontent-pro-c31="" class="es-icon-mail-preview"></span>
+                </button>
+              </span>
+              <span _ngcontent-pro-c31="" class="esdev-t-emailtesting" container="body" placement="bottom" style="display: inline-block;" tabindex="null">
+                <button _ngcontent-pro-c31="" class="btn btn-default btn-round">
+                  <span _ngcontent-pro-c31="" class="es-icon-testing"></span>
+                </button>
+              </span>
+            </div>
+            <div _ngcontent-pro-c31="" class="menu-header-user-dropdowns">
+                <mb-user-menu _ngcontent-pro-c31="" _nghost-pro-c9=""><div _ngcontent-pro-c9="" class="user-menu btn-group pull-right esdev-ml15" mb-click-outside="">
+    <button _ngcontent-pro-c9="" class="btn btn-default dropdown-toggle" type="button">
+        <mb-user-avatar _ngcontent-pro-c9="" classes="small" _nghost-pro-c11=""><div _ngcontent-pro-c11="" class="user-avatar company-avatar-preview esdev-mr15 pull-left small" style="background-image: url(&quot;&quot;); background-color: rgb(236, 208, 116);">
+  <!----><span _ngcontent-pro-c11="" class="user-first-letters ng-star-inserted">WC</span>
+</div>
+</mb-user-avatar>
+    </button>
+    <!---->
+</div>
+</mb-user-menu>
+                <!----><!---->
+                    <!---->
+                
+                <!----><mb-upgrade-button _ngcontent-pro-c31="" _nghost-pro-c7="" class="ng-star-inserted"><!----><button _ngcontent-pro-c7="" class="btn btn-warning esdev-t-upgrade-sub text-overflow ng-star-inserted" translate="">
+    Upgrade
+</button>
+</mb-upgrade-button>
+            </div>
+        </div>
+    </div>
+</nav>
+<div _ngcontent-pro-c31="" class="hidden">
+    <!----><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/esputnik.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/mailchimp.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/html.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/outlook.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/getresponse.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/birdsend.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/getresponse360.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/gmail.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/zoho.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/campaing-monitor.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/unisender.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/sendgrid.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/pdf.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/image.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/braze.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/constant-contact.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/mailigen.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/sendpulse.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/hubspot.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/salesforce.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/esp-more.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/amphtml.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/klaviyo.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/aweber.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/activecampaign.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/mailijet.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/sparkpost.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/maileon.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/mailgun.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/tripolis.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/sendinblue.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/amazon.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/amazon.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/icontact.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/ongage.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/sendloop.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/zapier.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/webhook.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/pepipost.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/mailclickconvert.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/mandrill.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/acton.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/postmark.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/acoustic.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/dotdigital.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/marketo.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/sharpspring.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/iterable.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/zeta.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/sendy.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/moosend.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/freshmail.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/mailganer.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/mautic.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/benchmark.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/clicksend.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/elastic-email.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/outlook-web.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/cleverreach.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/mailwizz.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/dashamail.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/e-goi.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/ontraport.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/postohub.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/opencrm.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/oracle-eloqua.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/mailup.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/moonmail.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/acumbamail.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/sendwithus.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/pabbly.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/user-com.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/zoho-marketing-hub.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/sendsay.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/expertsender.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/rule.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/reachmail.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/activetrail.svg" class="ng-star-inserted"><img _ngcontent-pro-c31="" alt="" src="./Template editor_files/useinbox.svg" class="ng-star-inserted">
+</div>
+</mb-editor-header>
+    <!---->
+  </ui-view>
+<div class="full-height cont" id="cabinet-content" style="padding-top: 0px;">
+  <div class="full-height">
+    <ui-view name="mainContent">
+    <!----><mb-html-editor class="ng-star-inserted"><mb-stripo-editor _nghost-pro-c33=""><div _ngcontent-pro-c33="" class="full-height cont" style="padding-top: 0px;">
+  <!----><div _ngcontent-pro-c33="" class="full-height panels-container ng-star-inserted">
+    <div _ngcontent-pro-c33="" class="full-height col-xs-5 col-md-4 settings-container col-lg-3 esdev-no-padding esdev-fixed settings-left-side">
+      <div _ngcontent-pro-c33="" id="settingsPanel" class="full-height esdev-app">
+            <div class="esdev-settings-panel-view full-height esdev-option-panel">
+                <ul class="nav nav-tabs nav-justified esdev-settings-tabs" role="tablist" aria-multiselectable="true">
+                    <li role="presentation" class="">
+                        <a data-target="#theme" aria-controls="theme" role="tab" data-toggle="tab" class="esdev-tab-title-decoration cursor-pointer">
+                            Appearance
+                        </a>
+                    </li>
+                    <li role="presentation" class="active">
+                        <a data-target="#blocks" aria-controls="blocks" role="tab" data-toggle="tab" class="esdev-tab-title-content cursor-pointer">
+                            Content
+                        </a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane esdev-settings-tab-pane " id="theme">
+                         <div class="panel-group" id="esdev-appearance-panel" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default esdev-panel">
+                                <div class="panel-heading esdev-panel-header esdev-panel-header-main" role="tab" id="es-appearance-general">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed esdev-accordion-title-appearance_general" role="button" data-toggle="collapse" data-parent="#esdev-appearance-panel" data-target="#collapseAppearanceOne" aria-expanded="false" aria-controls="collapseOne">
+                                            General Settings
+                                            <span class="es-icon-chevron-up revs rotate-90-180 text-gray pull-right"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseAppearanceOne" class="panel-collapse collapse esdev-panel-container esdev-accordion-appearance_general-container" role="tabpanel" aria-labelledby="es-appearance-general" accordion-name="appearance_general">
+                                </div>
+                            </div>
+                            <div class="panel panel-default esdev-panel">
+                                <div class="panel-heading esdev-panel-header esdev-panel-header-main" role="tab" id="es-appearance-lines">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed esdev-accordion-title-appearance_lines" role="button" data-toggle="collapse" data-parent="#esdev-appearance-panel" data-target="#collapseAppearanceTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Stripes
+                                            <span class="es-icon-chevron-up revs rotate-90-180 text-gray pull-right"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                
+                                <div id="collapseAppearanceTwo" class="panel-collapse collapse esdev-panel-container esdev-accordion-esdev-accordion-title-appearance_lines-container" role="tabpanel" aria-labelledby="es-appearance-lines" accordion-name="appearance_lines">
+                                
+                                    <div class="panel-group" id="stripesAccordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default esdev-panel">
+                                            <div class="panel-heading esdev-panel-header" esdev-panel-additional-header"="" role="tab" id="es-appearance-header">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed multi-level-title esdev-accordion-title-appearance_header" role="button" data-toggle="collapse" data-parent="#stripesAccordion" data-target="#collapseAppearanceSix" aria-expanded="false" aria-controls="collapseSix">
+                                                        Header
+                                                        <span class="es-icon-chevron-up revs rotate-90-180 text-gray pull-right"></span>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseAppearanceSix" class="panel-collapse multi-level collapse esdev-accordion-appearance_header-container" role="tabpanel" aria-labelledby="es-appearance-header" accordion-name="appearance_header">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="panel panel-default esdev-panel">
+                                            <div class="panel-heading esdev-panel-header esdev-panel-additional-header" role="tab" id="es-appearance-content">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed multi-level-title esdev-accordion-title-appearance_content" role="button" data-toggle="collapse" data-parent="#stripesAccordion" data-target="#collapseAppearanceSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                                        Content
+                                                        <span class="es-icon-chevron-up revs rotate-90-180 text-gray pull-right"></span>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseAppearanceSeven" class="panel-collapse multi-level collapse esdev-accordion-appearance_content-container" role="tabpanel" aria-labelledby="es-appearance-content" accordion-name="appearance_content">
+                                            </div>
+                                        </div>
+
+                                        <div class="panel panel-default esdev-panel">
+                                            <div class="panel-heading esdev-panel-header esdev-panel-additional-header" role="tab" id="es-appearance-footer">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed multi-level-title esdev-accordion-title-appearance_footer" role="button" data-toggle="collapse" data-parent="#stripesAccordion" data-target="#collapseAppearanceEight" aria-expanded="false" aria-controls="collapseEight">
+                                                        Footer
+                                                        <span class="es-icon-chevron-up revs rotate-90-180 text-gray pull-right"></span>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseAppearanceEight" class="panel-collapse multi-level collapse esdev-accordion-appearance_footer-container" role="tabpanel" aria-labelledby="es-appearance-footer" accordion-name="appearance_footer">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="panel panel-default esdev-panel">
+                                            <div class="panel-heading esdev-panel-header" esdev-panel-additional-header"="" role="tab" id="es-appearance-info">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed multi-level-title esdev-accordion-title-appearance_info" role="button" data-toggle="collapse" data-parent="#stripesAccordion" data-target="#collapseAppearanceNine" aria-expanded="false" aria-controls="collapseNine">
+                                                        Info area
+                                                        <span class="es-icon-chevron-up revs rotate-90-180 text-gray pull-right"></span>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseAppearanceNine" class="panel-collapse multi-level collapse esdev-accordion-appearance_info-container" role="tabpanel" aria-labelledby="es-appearance-info" accordion-name="appearance_info">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="panel panel-default esdev-panel">
+                                <div class="panel-heading esdev-panel-header esdev-panel-header-main" role="tab" id="es-appearance-heading">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed esdev-accordion-title-appearance_heading" role="button" data-toggle="collapse" data-parent="#esdev-appearance-panel" data-target="#collapseAppearanceThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Headings
+                                            <span class="es-icon-chevron-up revs rotate-90-180 text-gray pull-right"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseAppearanceThree" class="panel-collapse collapse esdev-panel-container esdev-accordion-appearance_heading-container" role="tabpanel" aria-labelledby="es-appearance-heading" accordion-name="appearance_heading">
+                                </div>
+                            </div>
+                            <div class="panel panel-default esdev-panel">
+                                <div class="panel-heading esdev-panel-header esdev-panel-header-main" role="tab" id="es-appearance-button">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed esdev-accordion-title-appearance_button" role="button" data-toggle="collapse" data-parent="#esdev-appearance-panel" data-target="#collapseAppearanceFour" aria-expanded="false" aria-controls="collapseFour">
+                                            Button
+                                            <span class="es-icon-chevron-up revs rotate-90-180 text-gray pull-right"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseAppearanceFour" class="panel-collapse collapse esdev-panel-container esdev-accordion-appearance_button-container" role="tabpanel" aria-labelledby="es-appearance-button" accordion-name="appearance_button">
+                                </div>
+                            </div>
+                            <div class="panel panel-default esdev-panel">
+                                <div class="panel-heading esdev-panel-header esdev-panel-header-main" role="tab" id="es-appearance-adapt">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed esdev-accordion-title-appearance_adapt" role="button" data-toggle="collapse" data-parent="#esdev-appearance-panel" data-target="#collapseAppearanceFive" aria-expanded="false" aria-controls="collapseFive">
+                                            Mobile Formatting
+                                            <span class="es-icon-chevron-up revs rotate-90-180 text-gray pull-right"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseAppearanceFive" class="panel-collapse collapse esdev-panel-container esdev-accordion-appearance_adapt-container" role="tabpanel" aria-labelledby="es-appearance-adapt" accordion-name="appearance_adapt">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane esdev-settings-tab-pane active" id="blocks">
+
+                        <div class="panel-group" id="baseStripes" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default esdev-panel">
+                                <div class="panel-heading esdev-panel-header esdev-panel-header-main" role="tab" id="es-structures">
+                                    <h4 class="panel-title">
+                                        <a class="esdev-accordion-title-structures" role="button" data-toggle="collapse" data-parent="#baseStripes" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Structures
+                                            <span class="es-icon-chevron-up revs rotate-90-180 text-gray pull-right"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse esdev-panel-container esdev-accordion-structures-container collapse in" role="tabpanel" aria-labelledby="es-structures" accordion-name="structures" aria-expanded="true" style="">
+            <div class="nav-panel esdev-nav-panel back-panel">
+                <a style="cursor: pointer" class="backButton"><span class="es-icon-chevron-left"></span>back</a>
+                
+             </div>
+            <div class="panel-body esdev-panel-content-wrapper" mb-scroll-shadow="" mb-panel-max-height="" style="max-height: 616.219px; overflow: hidden auto;">
+                <image-lib id="settings-panel-image-lib" node-type="custom-component"></image-lib>  
+                <div class="form-horizontal esd-controls-wrapper ">
+                    <div>
+                        <ul class="nav nav-pills nav-justified settings-view-data-tabs equal-width-tabs" role="tablist">
+                            <li role="presentation" class="element-view-tab active">
+                                <a class="element-view-option" role="tab" data-target="elementViewOption" data-toggle="tab">Appearance</a>
+                            </li>
+                            
+                            <li role="presentation" class="element-data-tab ">
+                                <a class="element-data-option" role="tab" data-target="elementDataOption" data-toggle="tab">Data</a>
+                            </li>
+                            
+                        </ul>
+                        <div class="tab-content settings-view-data-tabs-content">
+                            <div role="tabpanel" class="tab-pane fade in active form-controls-container" id="elementViewOption"><div class="esdev-setting-control setting-control-0"> 
+            <div class="form-group emailScopeSettingsControl">
+                <label for="emailScope" class="col-xs-7 control-label">Message area</label>
+                        <div class="col-xs-5 text-right esdev-t-selector-scope">
+                            <dropdown-input classes="esdev-email-scope-selector" buttonwrapperclasses="form-control" globalscope="emailScopeSettingsControl" mbbindprop-value="scope" mbbindprop-values="availableScopes" mbbindprop-on-selected="onChange" node-type="custom-component"><div class="btn-group bootstrap-select esdev-email-scope-selector form-control" style="" accessor="buttonContainer">
+        <button type="button" class="btn dropdown-toggle btn-default " click="toggleDropdown()" style="">
+                
+            <span class="filter-option pull-left" accessor="selectedValueContainer">                  
+                
+                
+               <span>
+                Content
+               </span>
+                
+            </span>            &nbsp;
+            <span class="caret"></span>
+        </button>
+    </div>
+        
+    <div class="btn-group bootstrap-select esdev-email-scope-selector  " style="width: auto; position: absolute;" accessor="dropdownContainer" click="onListClick()">
+        <div class="dropdown-menu open " style="overflow: hidden;" accessor="dropdownMenu">
+            
+            <ul class="dropdown-menu inner" role="menu" style="overflow-y: auto; overflow-x: hidden; scrollbar-width: thin;" accessor="dropdownList">            
+                
+                    
+                    
+                    
+                    <li class=" 
+                                
+                                select-item" value="HEADER" valueindex="0">
+                        <a tabindex="1" class="cursor-pointer  ">
+                            
+                            <span style="float: right">
+                              
+                            </span>
+                          <span style="max-width:" 525px="" class="">
+                          
+                                <span class="text text-overflow" style="margin-right: 0; display: inline">Header</span>                                
+                                
+                          </span>
+                            
+                        </a>
+                    </li>
+                    
+                
+                    
+                    
+                    
+                    <li class=" 
+                               selected active  
+                                select-item" value="CONTENT" accessor="selectedItemElement" valueindex="1">
+                        <a tabindex="2" class="cursor-pointer  ">
+                            
+                            <span style="float: right">
+                              
+                            </span>
+                          <span style="max-width:" 525px="" class="">
+                          
+                                <span class="text text-overflow" style="margin-right: 0; display: inline">Content</span>                                
+                                
+                          </span>
+                            
+                        </a>
+                    </li>
+                    
+                
+                    
+                    
+                    
+                    <li class=" 
+                                
+                                select-item" value="FOOTER" valueindex="2">
+                        <a tabindex="3" class="cursor-pointer  ">
+                            
+                            <span style="float: right">
+                              
+                            </span>
+                          <span style="max-width:" 525px="" class="">
+                          
+                                <span class="text text-overflow" style="margin-right: 0; display: inline">Footer</span>                                
+                                
+                          </span>
+                            
+                        </a>
+                    </li>
+                    
+                
+                    
+                    
+                    
+                    <li class=" 
+                                
+                                select-item" value="INFO_AREA" valueindex="3">
+                        <a tabindex="4" class="cursor-pointer  ">
+                            
+                            <span style="float: right">
+                              
+                            </span>
+                          <span style="max-width:" 525px="" class="">
+                          
+                                <span class="text text-overflow" style="margin-right: 0; display: inline">Info area</span>                                
+                                
+                          </span>
+                            
+                        </a>
+                    </li>
+                    
+                
+                <li class="no-results hidden" accessor="noResultsLabel">Nothing found</li>                                  
+            </ul>
+        </div>
+    </div></dropdown-input>
+                        </div>
+            </div></div>
+                            <hr class="setting-control-hr-0"><div class="esdev-setting-control setting-control-1">
+                <div class="form-group esdev-color-control">
+                    <label tooltip-width="300" mb-tooltip="Stripe background color" class="col-xs-8 control-label text-overflow">Stripe background color</label>
+                    <div class="col-xs-4 esdev-no-padding-left">
+                        <color-selector globalscope="colorBGStripeSettingsControl" istextcolor="false" mbbindprop-on-color-selected="updateElementColor" mbbindprop-color="initialColor" mbbindprop-no-transparency="noTransparency" node-type="custom-component"><span class="colorpicker-component" accessor="inputContainer">
+        <input type="text" placeholder="transparent" class="form-control color-picker colorpicker-element esdev-t-cp-colorBGStripeSettingsControl" value="#31cb4b" style="background-color: rgba(0, 0, 0, 0); color: rgb(153, 153, 153);" accessor="colorInput" click="togglePicker()">
+    </span>
+    <div class="color-selector-container colorpicker dropdown-menu esd-colorpicker-popup colorpicker-right" accessor="colorContainer">
+      <canvas class="color-selector-color-block" height="100" width="100" accessor="colorBlock">
+      </canvas>
+      <div class="color-position" accessor="blockPositionMarker" style="left: 104px; top: 104px;"></div>
+      <canvas class="color-selector-color-strip" height="100" width="23" accessor="colorStrip">
+      </canvas>
+      <div class="hue-position" accessor="stripPositionMarker" style="top: 0px;"></div>
+      
+      <div class="colorpicker-selectors colorpicker-visible" click="onPaletteClick()">      
+          <i class="colorpicker-selectors-color default-preset" style="background-color: transparent;" color="transparent"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #333333;" color="#333333"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #666666;" color="#666666"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #999999;" color="#999999"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #cccccc;" color="#cccccc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #efefef;" color="#efefef"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ffffff;" color="#ffffff"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #f4cccc;" color="#f4cccc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #fce5cd;" color="#fce5cd"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #fff2cc;" color="#fff2cc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #d9ead3;" color="#d9ead3"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #d0e0e3;" color="#d0e0e3"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #cfe2f3;" color="#cfe2f3"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ead1dc;" color="#ead1dc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ea9999;" color="#ea9999"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #f9cb9c;" color="#f9cb9c"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ffe599;" color="#ffe599"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #b6d7a8;" color="#b6d7a8"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #a2c4c9;" color="#a2c4c9"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #9fc5e8;" color="#9fc5e8"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #d5a6bd;" color="#d5a6bd"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #e06666;" color="#e06666"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #f6b26b;" color="#f6b26b"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ffd966;" color="#ffd966"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #93c47d;" color="#93c47d"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #76a5af;" color="#76a5af"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #6fa8dc;" color="#6fa8dc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #c27ba0;" color="#c27ba0"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #cc0000;" color="#cc0000"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #e69138;" color="#e69138"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #f1c232;" color="#f1c232"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #6aa84f;" color="#6aa84f"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #45818e;" color="#45818e"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #3d85c6;" color="#3d85c6"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #a64d79;" color="#a64d79"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #990000;" color="#990000"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #b45f06;" color="#b45f06"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #bf9000;" color="#bf9000"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #38761d;" color="#38761d"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #134f5c;" color="#134f5c"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #0b5394;" color="#0b5394"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #741b47;" color="#741b47"></i>          
+      </div>
+    </div></color-selector>
+                    </div>
+                </div>    
+            </div>
+                            <hr class="setting-control-hr-1"><div class="esdev-setting-control setting-control-2">
+                <div class="form-group esdev-color-control">
+                    <label tooltip-width="300" mb-tooltip="Background color of content" class="col-xs-8 control-label text-overflow">Background color of content</label>
+                    <div class="col-xs-4 esdev-no-padding-left">
+                        <color-selector globalscope="colorContentStripeSettingsControl" istextcolor="false" mbbindprop-on-color-selected="updateElementColor" mbbindprop-color="initialColor" mbbindprop-no-transparency="noTransparency" node-type="custom-component"><span class="colorpicker-component" accessor="inputContainer">
+        <input type="text" placeholder="transparent" class="form-control color-picker colorpicker-element esdev-t-cp-colorContentStripeSettingsControl" value="#31cb4b" style="background-color: rgb(255, 255, 255); color: rgb(51, 51, 51);" accessor="colorInput" click="togglePicker()">
+    </span>
+    <div class="color-selector-container colorpicker dropdown-menu esd-colorpicker-popup colorpicker-right" accessor="colorContainer">
+      <canvas class="color-selector-color-block" height="100" width="100" accessor="colorBlock">
+      </canvas>
+      <div class="color-position" accessor="blockPositionMarker" style="left: 5px; top: 5px;"></div>
+      <canvas class="color-selector-color-strip" height="100" width="23" accessor="colorStrip">
+      </canvas>
+      <div class="hue-position" accessor="stripPositionMarker" style="top: 0px;"></div>
+      
+      <div class="colorpicker-selectors colorpicker-visible" click="onPaletteClick()">      
+          <i class="colorpicker-selectors-color default-preset" style="background-color: transparent;" color="transparent"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #333333;" color="#333333"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #666666;" color="#666666"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #999999;" color="#999999"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #cccccc;" color="#cccccc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #efefef;" color="#efefef"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ffffff;" color="#ffffff"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #f4cccc;" color="#f4cccc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #fce5cd;" color="#fce5cd"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #fff2cc;" color="#fff2cc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #d9ead3;" color="#d9ead3"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #d0e0e3;" color="#d0e0e3"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #cfe2f3;" color="#cfe2f3"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ead1dc;" color="#ead1dc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ea9999;" color="#ea9999"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #f9cb9c;" color="#f9cb9c"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ffe599;" color="#ffe599"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #b6d7a8;" color="#b6d7a8"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #a2c4c9;" color="#a2c4c9"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #9fc5e8;" color="#9fc5e8"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #d5a6bd;" color="#d5a6bd"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #e06666;" color="#e06666"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #f6b26b;" color="#f6b26b"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ffd966;" color="#ffd966"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #93c47d;" color="#93c47d"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #76a5af;" color="#76a5af"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #6fa8dc;" color="#6fa8dc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #c27ba0;" color="#c27ba0"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #cc0000;" color="#cc0000"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #e69138;" color="#e69138"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #f1c232;" color="#f1c232"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #6aa84f;" color="#6aa84f"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #45818e;" color="#45818e"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #3d85c6;" color="#3d85c6"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #a64d79;" color="#a64d79"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #990000;" color="#990000"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #b45f06;" color="#b45f06"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #bf9000;" color="#bf9000"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #38761d;" color="#38761d"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #134f5c;" color="#134f5c"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #0b5394;" color="#0b5394"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #741b47;" color="#741b47"></i>          
+      </div>
+    </div></color-selector>
+                    </div>
+                </div>    
+            </div>
+                            <hr class="setting-control-hr-2"><div class="esdev-setting-control setting-control-3">
+            <img-toggle-selector id="imgStripeUpload-toggle" label="Background image" imagelibraryid="settings-panel-image-lib" globalscope="imgUploadStripeSettingsControl" mbbindprop-image="image" mbbindprop-get-image-selected-after-destroy-callback="getImageSelectedAfterDestroyCallback" mbbindprop-on-image-selected="onImageSelected" mbbindprop-on-cancel-callback="onCancelCallback" node-type="custom-component"><switcher-component id="imgStripeUpload-toggle-switcher" label="Background image" accessor="switcher" mbbindprop-on="isImageSelected" mbbindprop-on-switched="onSwitched" node-type="custom-component"><div class="form-group">
+            <label data-html="true" mb-tooltip="Background image" for="switcher-component_1646123412741_input" class="col-xs-9 control-label text-overflow esdev-no-padding-right" tooltip-width="400">
+                Background image
+            </label>
+            <div class="col-xs-3 esdev-no-padding-left">
+                <label class="esdev-switch" accessor="switcher">
+                    <input type="checkbox" id="switcher-component_1646123412741_input" class="collapsed" click="onToggled()">
+                    <div class="esdev-slider"></div>
+                </label>
+            </div>
+            
+            
+        </div></switcher-component>
+                
+            <img-selector id="imgStripeUpload-toggle-image" imagelibraryid="settings-panel-image-lib" accessor="imgSelector" mbbindprop-image="image" mbbindprop-on-image-selected="onImageSelected" mbbindprop-on-cancel-callback="onCancelCallback" node-type="custom-component"></img-selector></img-toggle-selector>
+            <div class="collapse" id="imgStripeUpload" aria-expanded="true">
+            </div>
+        </div>
+                            <hr class="setting-control-hr-3"><div class="esdev-setting-control setting-control-4">
+            <div class="form-group " false="">
+                <label for="containerSwitch" class="col-xs-8 control-label esdev-no-padding-right text-overflow" tooltip-width="400" mb-tooltip="Border of content">Border of content</label>
+                <div class="col-xs-4 esdev-no-padding-left">
+                    <label class="esdev-switch">
+                        <input id="containerSwitch" type="checkbox">
+                        <div class=" esdev-slider"></div>
+                    </label>
+                </div>
+            </div>
+            
+            
+            <div class="esd-container-line-style" "="">
+            <div class="form-group  subcontrols-row detailed-row-style border-all-control">
+                <label class="col-xs-12">Common</label>
+                <div class="col-xs-8  width-inputs">
+                    <div class="input-group esdev-count-range esdev-border-line" id="border-all-width">
+                        <span class="input-group-btn">
+                            <button id="minus" class="btn btn-default minus" type="button"><span id="minus" class="es-icon-minus"></span></button>
+                        </span>
+                        <input type="number" class="form-control text-center width-input" value="0" readonly="">
+                        <span class="input-group-btn">
+                            <button id="plus" class="btn btn-default plus" type="button"><span id="plus" class="es-icon-plus"></span></button>
+                            <dropdown-input buttonwrapperstyles="width:100%" classes="esd-select-line-style-all" globalscope="SETTING_CONTROL_NAME_LINE_STYLE_STRIPE" mbbindprop-value="style_all" mbbindprop-values="availableStyles" mbbindprop-get-item-label-template="getPreviewLabel" mbbindprop-on-selected="updateType" position="all" node-type="custom-component"><div class="btn-group bootstrap-select esd-select-line-style-all " style="width:100%" accessor="buttonContainer">
+        <button type="button" class="btn dropdown-toggle btn-default " click="toggleDropdown()" style="">
+                
+            <span class="filter-option pull-left" accessor="selectedValueContainer">                  
+                
+                <hr style="border:0; border-bottom:2px solid #5f5f5f; margin:9px 0;">
+                
+            </span>            &nbsp;
+            <span class="caret"></span>
+        </button>
+    </div>
+        
+    <div class="btn-group bootstrap-select esd-select-line-style-all  " style="width: auto; position: absolute;" accessor="dropdownContainer" click="onListClick()">
+        <div class="dropdown-menu open " style="overflow: hidden;" accessor="dropdownMenu">
+            
+            <ul class="dropdown-menu inner" role="menu" style="overflow-y: auto; overflow-x: hidden; scrollbar-width: thin;" accessor="dropdownList">            
+                
+                    
+                    
+                    
+                    <li class=" 
+                               selected active  
+                                select-item" value="solid" accessor="selectedItemElement" valueindex="0">
+                        <a tabindex="1" class="cursor-pointer  ">
+                            <hr style="border:0; border-bottom:2px solid #5f5f5f; margin:9px 0;">
+                            
+                        </a>
+                    </li>
+                    
+                
+                    
+                    
+                    
+                    <li class=" 
+                                
+                                select-item" value="dashed" valueindex="1">
+                        <a tabindex="2" class="cursor-pointer  ">
+                            <hr style="border:0; border-bottom:2px dashed #5f5f5f; margin:9px 0;">
+                            
+                        </a>
+                    </li>
+                    
+                
+                    
+                    
+                    
+                    <li class=" 
+                                
+                                select-item" value="dotted" valueindex="2">
+                        <a tabindex="3" class="cursor-pointer  ">
+                            <hr style="border:0; border-bottom:2px dotted #5f5f5f; margin:9px 0;">
+                            
+                        </a>
+                    </li>
+                    
+                
+                <li class="no-results hidden" accessor="noResultsLabel">Nothing found</li>                                  
+            </ul>
+        </div>
+    </div></dropdown-input>
+                        </span>
+                    </div>
+                </div>
+                <div id="container-style-color-picker-all" class="col-xs-4 esdev-no-padding-left">
+                    <color-selector globalscope="SETTING_CONTROL_NAME_LINE_STYLE_STRIPE" mbbindprop-on-color-selected="onColorSelected" mbbindprop-color="color_all" position="all" node-type="custom-component"><span class="colorpicker-component" accessor="inputContainer">
+        <input type="text" placeholder="transparent" class="form-control color-picker colorpicker-element esdev-t-cp-SETTING_CONTROL_NAME_LINE_STYLE_STRIPE" value="#31cb4b" style="background-color: transparent; color: rgb(153, 153, 153);" accessor="colorInput" click="togglePicker()">
+    </span>
+    <div class="color-selector-container colorpicker dropdown-menu esd-colorpicker-popup colorpicker-right" accessor="colorContainer">
+      <canvas class="color-selector-color-block" height="100" width="100" accessor="colorBlock">
+      </canvas>
+      <div class="color-position" accessor="blockPositionMarker" style="left: 104px; top: 104px;"></div>
+      <canvas class="color-selector-color-strip" height="100" width="23" accessor="colorStrip">
+      </canvas>
+      <div class="hue-position" accessor="stripPositionMarker" style="top: 0px;"></div>
+      
+      <div class="colorpicker-selectors colorpicker-visible" click="onPaletteClick()">      
+          <i class="colorpicker-selectors-color default-preset" style="background-color: transparent;" color="transparent"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #333333;" color="#333333"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #666666;" color="#666666"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #999999;" color="#999999"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #cccccc;" color="#cccccc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #efefef;" color="#efefef"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ffffff;" color="#ffffff"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #f4cccc;" color="#f4cccc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #fce5cd;" color="#fce5cd"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #fff2cc;" color="#fff2cc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #d9ead3;" color="#d9ead3"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #d0e0e3;" color="#d0e0e3"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #cfe2f3;" color="#cfe2f3"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ead1dc;" color="#ead1dc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ea9999;" color="#ea9999"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #f9cb9c;" color="#f9cb9c"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ffe599;" color="#ffe599"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #b6d7a8;" color="#b6d7a8"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #a2c4c9;" color="#a2c4c9"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #9fc5e8;" color="#9fc5e8"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #d5a6bd;" color="#d5a6bd"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #e06666;" color="#e06666"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #f6b26b;" color="#f6b26b"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #ffd966;" color="#ffd966"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #93c47d;" color="#93c47d"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #76a5af;" color="#76a5af"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #6fa8dc;" color="#6fa8dc"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #c27ba0;" color="#c27ba0"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #cc0000;" color="#cc0000"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #e69138;" color="#e69138"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #f1c232;" color="#f1c232"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #6aa84f;" color="#6aa84f"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #45818e;" color="#45818e"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #3d85c6;" color="#3d85c6"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #a64d79;" color="#a64d79"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #990000;" color="#990000"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #b45f06;" color="#b45f06"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #bf9000;" color="#bf9000"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #38761d;" color="#38761d"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #134f5c;" color="#134f5c"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #0b5394;" color="#0b5394"></i><i class="colorpicker-selectors-color default-preset" style="background-color: #741b47;" color="#741b47"></i>          
+      </div>
+    </div></color-selector>
+                </div>
+            </div></div></div>
+                            <hr class="setting-control-hr-4"><div class="esdev-setting-control setting-control-5">
+            <div class="visibilitySettingsControl e2e_visibilityControl">
+                <div class="form-group clearfix" style="margin-bottom:8px;">
+                    <label mb-tooltip="Hide element" class="col-xs-12 col-sm-6 col-lg-5 control-label text-overflow esdev-no-padding-right">Hide element</label>
+                    <div class="col-xs-12 col-sm-6 col-lg-7 text-right esdev-no-padding-left">
+                        <div class="btn-group" data-toggle="buttons" style="overflow: hidden;padding: 0 3px 5px;margin: 0 -3px -5px;">
+                            <label id="visible-always" class="btn btn-default active">
+                                No
+                            </label>
+                            <label id="not-visible-desktop" class="btn btn-default " mb-tooltip="On desktop" data-placement="top" title="">
+                                <span class="es-icon-desktop"></span>
+                            </label>
+                            <label id="not-visible-mobile" class="btn btn-default " mb-tooltip="On mobile" data-placement="top" title="">
+                                <span class="es-icon-mobile"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <p class="small text-muted explanation"></p>
+            </div></div>
+                            <hr class="setting-control-hr-5 esdev-hidden"><div class="esdev-setting-control setting-control-6"></div>
+                            <hr class="setting-control-hr-6"><div class="esdev-setting-control setting-control-7"><div class="ampVisibilitySettingsControl ">
+                <div class="form-group clearfix amp-visibility-control" style="margin-bottom:8px;">
+                    <label mb-tooltip="Include in" for="mimetype" class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-width-100per control-label text-overflow esdev-no-padding-right">Include in</label>                    
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-width-100per text-right esdev-no-padding-left">
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-default active" amp-vis-type="anywhere">
+                                <input type="radio" name="options" id="option1" autocomplete="off" checked=""> 
+                                    Both
+                            </label>
+                            <label class="btn btn-default " amp-vis-type="htmlOnly" mb-tooltip="Classic HTML" title="">
+                                <input type="radio" name="options" id="option2" autocomplete="off">
+                                    HTML
+                            </label>
+                            <label class="btn btn-default " amp-vis-type="ampHtmlOnly" mb-tooltip="AMPHTML" title="">
+                                <input type="radio" name="options" id="option3" autocomplete="off">
+                                    <span class="es-icon-amp"></span>HTML
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <p class="small text-muted " amp-descr-type="anywhere">
+                    The element will be included in both MIME versions of the email message: to classic HTML and AMPHTML.
+                </p>
+                <p class="small text-muted hidden" amp-descr-type="htmlOnly">
+                    The element will be included only in the HTML MIME version of the email message. The item will be hidden in the AMPHTML version.
+                </p>
+                <p class="small text-muted hidden" amp-descr-type="ampHtmlOnly">
+                    The element will be included only in the AMPHTML MIME version of the email message. The item will be hidden in the HTML version.
+                </p></div></div>
+                            </div>                               
+                              <div role="tabpanel" class="tab-pane fade " id="elementDataOption">
+                                
+                            </div>
+                            
+                        </div>    
+                    </div>
+                </div>
+            </div></div>
+                            </div>
+                            <div class="panel panel-default esdev-panel">
+                                <div class="panel-heading esdev-panel-header esdev-panel-header-main" role="tab" id="es-components">
+                                    <h4 class="panel-title">
+                                        <a class="esdev-accordion-title-blocks collapsed" role="button" data-toggle="collapse" data-parent="#baseStripes" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Blocks
+                                            <span class="es-icon-chevron-up revs rotate-90-180 text-gray pull-right"></span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse esdev-panel-container esdev-accordion-blocks-container bottom-shadow esd-panel-deactivated collapse" role="tabpanel" aria-labelledby="es-components" accordion-name="blocks" aria-expanded="false" style="height: 0px;"></div>
+                            </div>
+                            <div class="panel panel-default esdev-panel">
+                                <div class="panel-heading esdev-panel-header esdev-panel-header-main" role="tab" id="es-block-library">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed esdev-accordion-title-library" role="button" data-toggle="collapse" data-parent="#baseStripes" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Modules
+                                            <span class="es-icon-chevron-up revs rotate-90-180 text-gray pull-right"></span>
+                                            <span class="pull-right fullscreen-toggle" mb-tooltip="Expand modules library" style="display: none;" expanded="false" title="">
+                                                <span class="es-icon-full-screen" style="margin-right: 16px;"></span>
+                                            </span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse esdev-panel-container esdev-accordion-library-container" role="tabpanel" aria-labelledby="es-block-library" accordion-name="library" aria-expanded="false">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="esdev-info-area info-custom-html" style="display: none">
+                            <div class="alert alert-info" role="alert">
+                                <p>To activate the Drag'n'Drop function of the editor please make sure you have adapted your custom HTML code in accordance with Stripo <a href="https://stripo.email/blog/advanced-option-email-templates-adaptation-stripo-builder" target="_blank">template guidelines</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div></div>
+    </div>
+    <div _ngcontent-pro-c33="" class="full-height preview-container mail-right-side col-lg-offset-3 col-md-offset-4 col-lg-9 col-md-8 col-xs-12">
+      
+  <mb-editor-header-settings _nghost-pro-c34="" class="ng-tns-c34-0 ng-star-inserted"><!---->
+</mb-editor-header-settings>
+  <mb-editor-header-email-testing _nghost-pro-c35="" class="ng-tns-c35-1 ng-star-inserted"><!---->
+</mb-editor-header-email-testing>
+
+      <div _ngcontent-pro-c33="" class="row es-email-view full-height">
+        <div _ngcontent-pro-c33="" class="col-xs-12 esdev-no-padding full-height esdev-app" id="previewPanel">
+        <div class="esdev-preview-splitter full-height" style="height: 816px;">
+            <iframe class="stripo-preview-frame" frameborder="0" width="100%" style="height: 816px;" src="./Template editor_files/saved_resource.html"></iframe>
+            <div style="height: 100%" class="esdev-code-editor-block-panel esdev-hidden ace-tomorrow-night">
+                <div id="esdev-html-code-editor-panel" style="height: 100%"></div>
+                <div id="esdev-css-code-editor-panel" class="esdev-hidden" style="height: 100%"></div>
+            </div>
+        </div>
+        <div id="esdev-preview-tmp-block" class="esdev-hidden"></div></div>
+        <!---->
+      </div>
+    </div>
+  </div>
+  <!---->
+</div>
+</mb-stripo-editor>
+
+</mb-html-editor>
+    <!---->
+  </ui-view>
+  </div>
+</div>
+</mb-main-container>
+    <!---->
+  </ui-view><!---->
+</mb-root>
+
+<script src="./Template editor_files/runtime-es2015.a4dadbc03350107420a4.js.下載" type="module"></script><script src="./Template editor_files/runtime-es5.a4dadbc03350107420a4.js.下載" nomodule="" defer=""></script><script src="./Template editor_files/polyfills-es5.eb721a6c5de9900a3be2.js.下載" nomodule="" defer=""></script><script src="./Template editor_files/polyfills-es2015.8c2217982875680d6295.js.下載" type="module"></script><script src="./Template editor_files/scripts.67d31b38e4d44f1852ba.js.下載" defer=""></script><script src="./Template editor_files/main-es2015.d730e6e6ccecaaffbc23.js.下載" type="module"></script><script src="./Template editor_files/main-es5.d730e6e6ccecaaffbc23.js.下載" nomodule="" defer=""></script>
+
+<div style="display: none; visibility: hidden;"><script src="./Template editor_files/optimize.js.下載"></script></div><iframe name="__privateStripeMetricsController6480" frameborder="0" allowtransparency="true" scrolling="no" allow="payment *" src="./Template editor_files/m-outer-21b66fa0c573e809345fe202113a4338.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe><iframe name="__privateStripeController6481" frameborder="0" allowtransparency="true" scrolling="no" allow="payment *" src="./Template editor_files/controller-2ec31373c3f7d381bab1052895baf659.html" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe><script src="./Template editor_files/y79v5q64.js.下載" type="text/javascript" async=""></script><iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin" aria-hidden="true" frame-border="0" src="./Template editor_files/iframe.html" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;"></iframe><iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" aria-hidden="true" tabindex="-1" title="Intercom" src="./Template editor_files/saved_resource(1).html"></iframe><div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="assertive"></div><div id="cdk-describedby-message-container" aria-hidden="true" style="display: none;"><div id="cdk-describedby-message-0">Undo</div><div id="cdk-describedby-message-1">Redo</div><div id="cdk-describedby-message-2">History</div><div id="cdk-describedby-message-3">Objects</div><div id="cdk-describedby-message-4">Close</div></div></body></html>
