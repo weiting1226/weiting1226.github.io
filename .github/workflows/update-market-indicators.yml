@@ -1,0 +1,48 @@
+name: Update market liquidity indicators
+
+on:
+  schedule:
+    # 06:30 UTC daily (~ shortly after previous US trading day's data settles)
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "Years of history to fetch"
+        required: false
+        default: "10"
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: market-liquidity-monitor
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper
+        run: python -m scraper.build_dataset --years "${{ github.event.inputs.years || '10' }}"
+
+      - name: Commit and push updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No data changes to commit"
+          else
+            git commit -m "Update market liquidity indicators data"
+            git push
+          fi
