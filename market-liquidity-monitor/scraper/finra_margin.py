@@ -29,6 +29,9 @@ def fetch_finra_margin_debt() -> pd.Series:
     resp.raise_for_status()
     tables = pd.read_html(StringIO(resp.text))
 
+    logger.info("FINRA page: found %d HTML tables; shapes=%s",
+                len(tables), [t.shape for t in tables])
+
     target = None
     for t in tables:
         cols = [str(c).lower() for c in t.columns]
@@ -38,9 +41,13 @@ def fetch_finra_margin_debt() -> pd.Series:
             target = t
             break
     if target is None:
+        for i, t in enumerate(tables):
+            logger.error("FINRA table[%d] columns: %s", i, list(t.columns))
         raise ValueError("Could not locate the margin debt table on the FINRA page")
 
     target = target.rename(columns=lambda c: str(c).strip())
+    logger.info("FINRA matched table columns: %s", list(target.columns))
+    logger.info("FINRA matched table head:\n%s", target.head(5).to_string())
     year_col = next(c for c in target.columns if "year" in c.lower())
     month_col = next(c for c in target.columns if "month" in c.lower())
     debit_col = next(c for c in target.columns if "debit" in c.lower())
@@ -63,6 +70,11 @@ def fetch_finra_margin_debt() -> pd.Series:
             continue
 
     if not rows:
+        logger.error("FINRA row-parse failure. year_col=%r month_col=%r debit_col=%r; "
+                      "raw values: year=%s month=%s debit=%s",
+                      year_col, month_col, debit_col,
+                      target[year_col].tolist()[:5], target[month_col].tolist()[:5],
+                      target[debit_col].tolist()[:5])
         raise ValueError("Parsed FINRA table but found no valid rows")
 
     s = pd.Series({d: v for d, v in rows}).sort_index()
