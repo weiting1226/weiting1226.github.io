@@ -5,3 +5,4 @@ pandas_market_calendars>=4.4
 lxml>=5.0
 html5lib>=1.1
 beautifulsoup4>=4.12
+openpyxl>=3.1
