@@ -67,7 +67,8 @@ def build(years: int = 10) -> pd.DataFrame:
     m2 = fetch_fred_series_safe("M2SL", fetch_start_str, end_str)              # M2, monthly, $billions SA
 
     # ---- ② 資金成本與信用 ----
-    hy_oas = fetch_fred_series_safe("BAMLH0A0HYM2", fetch_start_str, end_str)  # HY OAS, daily, %
+    hy_oas = fetch_fred_series_safe("BAMLH0A0HYM2", fetch_start_str, end_str)  # HY OAS, daily, % (FRED/ICE licensing limits public history to ~3yr)
+    baa10y = fetch_fred_series_safe("BAA10Y", fetch_start_str, end_str)        # Moody's Baa - 10Y UST spread, daily, % (full free history; proxy for periods hy_oas lacks)
     t10y2y = fetch_fred_series_safe("T10Y2Y", fetch_start_str, end_str)        # 10y-2y, daily, percentage points
     sofr = fetch_fred_series_safe("SOFR", fetch_start_str, end_str)            # SOFR, daily, %
     ioer = fetch_fred_series_safe("IOER", fetch_start_str, end_str)            # discontinued 2021-07-28
@@ -96,7 +97,7 @@ def build(years: int = 10) -> pd.DataFrame:
 
     for s, name in [
         (walcl, "walcl_fed_total_assets"), (rrp, "on_rrp_balance"), (m2, "m2sl"),
-        (hy_oas, "hy_oas"), (t10y2y, "t10y2y"), (sofr, "sofr"), (ioer_iorb, "ioer_iorb"),
+        (hy_oas, "hy_oas"), (baa10y, "baa10y"), (t10y2y, "t10y2y"), (sofr, "sofr"), (ioer_iorb, "ioer_iorb"),
         (vix, "vix"), (vix9d, "vix9d"), (skew, "skew"), (margin_debt, "margin_debt"),
         (dxy_fred, "dxy_fred_broad"), (dxy_yahoo, "dxy_yahoo"),
         (dgs10, "dgs10"), (sp500, "sp500"), (nikkei, "nikkei225"), (kospi, "kospi"),
@@ -112,6 +113,7 @@ def build(years: int = 10) -> pd.DataFrame:
     derived["m2_yoy_pct"] = _yoy_pct(m2, periods=12)                # monthly series -> 12 obs/year
 
     derived["hy_oas_pct"] = hy_oas
+    derived["baa10y_credit_spread_proxy_pct"] = baa10y
     derived["t10y2y_bp"] = t10y2y * 100.0
 
     sofr_a, ioer_a = sofr.align(ioer_iorb, join="inner")

@@ -25,6 +25,7 @@ from io import StringIO
 
 import pandas as pd
 import requests
+from bs4 import BeautifulSoup
 
 logger = logging.getLogger(__name__)
 
@@ -40,6 +41,15 @@ def fetch_finra_margin_debt() -> pd.Series:
 
     logger.info("FINRA page: found %d HTML tables; shapes=%s",
                 len(tables), [t.shape for t in tables])
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    candidate_links = [
+        a["href"] for a in soup.find_all("a", href=True)
+        if re.search(r"(xls|xlsx|csv|histor|archive|download|full)", a["href"], re.I)
+        or re.search(r"(xls|xlsx|csv|histor|archive|download|full)", a.get_text(" ", strip=True), re.I)
+    ]
+    logger.info("FINRA page: %d candidate historical-data links: %s",
+                len(candidate_links), candidate_links)
 
     target = None
     for t in tables:
