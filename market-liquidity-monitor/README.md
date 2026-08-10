@@ -13,12 +13,13 @@
 | ① 總體貨幣流動性 | Fed資產負債表年增率 | FRED `WALCL` | 週 |
 | | ON RRP餘額 | FRED `RRPONTSYD` | 日 |
 | | M2貨幣供給年增率 | FRED `M2SL` | 月 |
-| ② 資金成本與信用 | HY信用利差OAS | FRED `BAMLH0A0HYM2` | 日 |
+| ② 資金成本與信用 | HY信用利差OAS | FRED `BAMLH0A0HYM2`（僅近3年，見下方限制） | 日 |
+| | HY信用利差替代指標 | FRED `BAA10Y`（Moody's Baa-10Y利差，全歷史）| 日 |
 | | 2年10年期公債利差 | FRED `T10Y2Y` | 日 |
 | | SOFR-IOER/IORB利差 | FRED `SOFR` / `IOER` / `IORB` | 日 |
 | ④ 風險偏好情緒 | VIX | Yahoo Finance `^VIX` | 日 |
 | | VIX期限結構 (VIX9D) | Yahoo Finance `^VIX9D` | 日 |
-| | 融資餘額年增率 | FINRA 官網月報（HTML 爬取） | 月 |
+| | 融資餘額年增率 | FINRA 歷史xlsx（1997起）+ 官網即時頁面合併 | 月 |
 | ⑤ 跨資產資金流向 | DXY美元指數月變動 | FRED `DTWEXBGS`（備援：Yahoo `DX-Y.NYB`） | 日 |
 | 軌道二哨兵代理 | SKEW指數 | Yahoo Finance `^SKEW` | 日 |
 | | 10年債殖利率單日變動 | FRED `DGS10` | 日 |
@@ -27,7 +28,14 @@
 
 **③ 市場微觀結構、部分軌道二訊號（買賣價差、期貨基差、ETF資金流、跨貨幣基差互換、市場廣度、
 熔斷事件、期貨隔夜盤）沒有免費可自動化的每日歷史資料來源**，詳見
-[`data/UNAVAILABLE_INDICATORS.md`](data/UNAVAILABLE_INDICATORS.md)，該檔案說明原因與替代做法。
+[`data/UNAVAILABLE_INDICATORS.md`](data/UNAVAILABLE_INDICATORS.md)，該檔案說明原因、替代做法，以及
+HY OAS／融資餘額兩項如何用替代資料源補齊十年歷史。
+
+## 儀表板
+
+[`dashboard.html`](dashboard.html) 是根據 `market_liquidity_indicators.csv` 建立的視覺化儀表板，
+套用文件裡的評分公式即時計算軌道一燈號、特殊修正、軌道二 SOP 檢查，並提供十年趨勢圖。純前端
+（無建置流程、無外部套件），由 GitHub Pages 直接以靜態頁面服務，資料每日隨 workflow 自動更新。
 
 ## 輸出
 

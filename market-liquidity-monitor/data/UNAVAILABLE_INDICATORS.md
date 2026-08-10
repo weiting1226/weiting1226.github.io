@@ -3,12 +3,12 @@
 文件《市場流動性雙軌監控系統》中，以下項目沒有免費、穩定、可程式化下載的每日歷史資料來源，
 因此爬蟲**不會**產生這些欄位的數值。列在這裡是為了明確交代範圍，而不是漏掉。
 
-## 資料涵蓋範圍受限的指標（非完全無法自動化，但拿不到完整十年）
+## 已用替代方案補齊的指標
 
-| 指標 | 實際涵蓋範圍 | 原因 |
-|---|---|---|
-| HY信用利差OAS（`hy_oas_pct`，FRED `BAMLH0A0HYM2`）| 僅約最近 3 年 | FRED 對 ICE BofA 授權的系列資料，免費／未授權使用者只能存取最近 3 年，完整歷史需要 ICE Data Indices 的付費授權，無法用爬蟲繞過 |
-| 融資餘額（`margin_debt_usd_millions`／`margin_debt_yoy_pct`，FINRA）| 僅最近約 13 個月（頁面目前顯示的滾動窗口）| FINRA 官網頁面本身只呈現近期資料，沒有在此頁面提供完整歷史下載；YoY 計算在資料不足 12 個月前會是 NaN |
+| 指標 | 原始限制 | 替代方案 | 現況 |
+|---|---|---|---|
+| HY信用利差OAS（`hy_oas_pct`，FRED `BAMLH0A0HYM2`）| FRED 對 ICE BofA 授權資料，免費使用者只能存取最近 3 年（2023-08 起），完整歷史需要 ICE Data Indices 付費授權 | 新增 `baa10y_credit_spread_proxy_pct`（FRED `BAA10Y`，Moody's Baa公司債對10年公債利差），全歷史免費無限制 | `hy_oas_pct` 仍只有 2023-08 起的真實 HY OAS；2015-2023 期間請改用 `baa10y_credit_spread_proxy_pct` 作為信用利差走勢的替代指標。**注意：兩者是不同金融工具（垃圾債 vs 投資級公司債），數值尺度不同，不可直接拼接比較，儀表板已分開標示** |
+| 融資餘額（`margin_debt_usd_millions`／`margin_debt_yoy_pct`，FINRA）| 官網即時頁面只顯示最近約 13 個月的滾動窗口 | 在頁面連結中找到 FINRA 提供的完整歷史下載檔（`margin-statistics.xlsx`），與即時頁面合併（近期以即時頁面為準）| 現在有 **1997-01 至今** 的完整月度資料，遠超過十年需求 |
 
 ## 軌道一
 

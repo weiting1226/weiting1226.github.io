@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>市場流動性雙軌監控系統 — 儀表板</title>
+<style>
+  .viz-root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --page-plane:     #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --gridline:       #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1:       #2a78d6; /* blue */
+    --series-2:       #eb6834; /* orange */
+    --series-3:       #1baf7a; /* aqua */
+    --series-4:       #eda100; /* yellow */
+    --series-5:       #e87ba4; /* magenta */
+    --series-6:       #008300; /* green */
+    --series-7:       #4a3aa7; /* violet */
+    --series-8:       #e34948; /* red */
+    --status-good:     #0ca30c;
+    --status-warning:  #fab219;
+    --status-serious:  #ec835a;
+    --status-critical: #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --page-plane:     #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --gridline:       #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1:       #3987e5;
+      --series-2:       #d95926;
+      --series-3:       #199e70;
+      --series-4:       #c98500;
+      --series-5:       #d55181;
+      --series-6:       #008300;
+      --series-7:       #9085e9;
+      --series-8:       #e66767;
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --page-plane:     #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --gridline:       #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-1:       #3987e5;
+    --series-2:       #d95926;
+    --series-3:       #199e70;
+    --series-4:       #c98500;
+    --series-5:       #d55181;
+    --series-6:       #008300;
+    --series-7:       #9085e9;
+    --series-8:       #e66767;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--page-plane);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 20px 80px; }
+
+  header.page-head { margin-bottom: 20px; }
+  header.page-head h1 { font-size: 22px; margin: 0 0 4px; }
+  header.page-head p { margin: 0; color: var(--text-secondary); font-size: 14px; }
+  header.page-head a { color: var(--series-1); }
+
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .card + .card { margin-top: 16px; }
+  .card h2 { font-size: 15px; margin: 0 0 12px; color: var(--text-primary); }
+  .card h2 .unit { font-weight: 400; color: var(--text-muted); font-size: 12px; }
+
+  .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px; }
+  .stat-tile {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 16px;
+  }
+  .stat-tile .label { font-size: 12px; color: var(--text-secondary); margin-bottom: 6px; }
+  .stat-tile .value { font-size: 26px; font-weight: 600; }
+  .stat-tile .sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  .light-badge { font-size: 18px; }
+
+  .flags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .flag {
+    font-size: 12px; padding: 4px 10px; border-radius: 999px;
+    border: 1px solid var(--border); color: var(--text-primary);
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .flag.warn { background: color-mix(in srgb, var(--status-warning) 18%, var(--surface-1)); }
+  .flag.critical { background: color-mix(in srgb, var(--status-critical) 18%, var(--surface-1)); }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 820px) { .grid-2 { grid-template-columns: 1fr; } }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 8px; font-size: 12px; color: var(--text-secondary); }
+  .legend .item { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .swatch { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .legend .swatch.line { height: 2px; border-radius: 1px; width: 14px; }
+
+  .chart-svg { width: 100%; height: auto; display: block; }
+  .chart-tooltip {
+    position: absolute; pointer-events: none; z-index: 5;
+    background: var(--surface-1); border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 10px; font-size: 12px; color: var(--text-primary);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    display: none; white-space: nowrap;
+  }
+  .chart-wrap { position: relative; }
+
+  table.data-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  table.data-table th, table.data-table td {
+    text-align: right; padding: 6px 8px; border-bottom: 1px solid var(--gridline);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  table.data-table th:first-child, table.data-table td:first-child { text-align: left; }
+  table.data-table th { color: var(--text-secondary); font-weight: 500; }
+  table.data-table tbody tr:hover { background: color-mix(in srgb, var(--series-1) 6%, transparent); }
+  .table-scroll { overflow-x: auto; }
+
+  .cell-pos { color: var(--status-good); }
+  .cell-neg { color: var(--status-critical); }
+
+  details.methodology summary { cursor: pointer; font-size: 14px; color: var(--series-1); }
+  details.methodology .body { margin-top: 10px; font-size: 13px; color: var(--text-secondary); }
+  details.methodology h3 { font-size: 13px; color: var(--text-primary); margin: 14px 0 6px; }
+  details.methodology code { background: var(--page-plane); padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+  details.methodology ul { padding-left: 18px; }
+
+  .banner {
+    border-radius: 10px; padding: 12px 14px; font-size: 13px; margin-bottom: 16px;
+    background: color-mix(in srgb, var(--status-warning) 16%, var(--surface-1));
+    border: 1px solid color-mix(in srgb, var(--status-warning) 40%, var(--border));
+    color: var(--text-primary);
+  }
+
+  .breakdown-table td, .breakdown-table th { text-align: left; }
+  .breakdown-table td.score, .breakdown-table th.score { text-align: center; }
+  .score-pill {
+    display: inline-block; min-width: 28px; padding: 2px 6px; border-radius: 6px;
+    font-size: 12px; font-weight: 600; text-align: center;
+  }
+  .score-pill.s2 { background: color-mix(in srgb, var(--status-good) 30%, var(--surface-1)); color: var(--status-good); }
+  .score-pill.s1 { background: color-mix(in srgb, var(--status-good) 15%, var(--surface-1)); color: var(--status-good); }
+  .score-pill.s0 { background: var(--page-plane); color: var(--text-secondary); }
+  .score-pill.sm1 { background: color-mix(in srgb, var(--status-serious) 18%, var(--surface-1)); color: var(--status-serious); }
+  .score-pill.sm2 { background: color-mix(in srgb, var(--status-critical) 22%, var(--surface-1)); color: var(--status-critical); }
+  .score-pill.na { background: var(--page-plane); color: var(--text-muted); }
+
+  footer.page-foot { margin-top: 28px; font-size: 12px; color: var(--text-muted); }
+  footer.page-foot a { color: var(--text-muted); }
+
+  #load-state { padding: 40px 0; text-align: center; color: var(--text-secondary); }
+</style>
+</head>
+<body class="viz-root" data-palette="#2a78d6,#eb6834,#1baf7a,#eda100,#e87ba4,#008300,#4a3aa7,#e34948">
+<div class="wrap">
+
+  <header class="page-head">
+    <h1>市場流動性雙軌監控系統 — 儀表板</h1>
+    <p>資料來源：<a href="data/market_liquidity_indicators.csv">market_liquidity_indicators.csv</a>
+       ・ 方法論見下方「評分方式與限制說明」 ・
+       <a href="data/UNAVAILABLE_INDICATORS.md">資料限制與替代方案</a> ・
+       <a href="README.md">README</a></p>
+  </header>
+
+  <div id="load-state">資料載入中…</div>
+  <div id="app" style="display:none;">
+
+    <div class="stat-row" id="stat-row"></div>
+
+    <div class="banner" id="track2-banner"></div>
+
+    <div class="card">
+      <h2>軌道一綜合分數 — 十年走勢 <span class="unit">加權綜合分數，-2 至 +2</span></h2>
+      <div class="legend" id="hero-legend"></div>
+      <div class="chart-wrap"><svg class="chart-svg" id="chart-hero"></svg><div class="chart-tooltip" id="tooltip-hero"></div></div>
+    </div>
+
+    <div class="card">
+      <h2>軌道一 — 最新評分明細</h2>
+      <div class="table-scroll">
+        <table class="data-table breakdown-table" id="breakdown-table"></table>
+      </div>
+    </div>
+
+    <div class="grid-2" id="chart-grid"></div>
+
+    <div class="card">
+      <h2>軌道二哨兵訊號 — 最近 20 個交易日 <span class="unit">日頻收盤近似值，非盤中即時訊號</span></h2>
+      <div class="table-scroll">
+        <table class="data-table" id="track2-table"></table>
+      </div>
+    </div>
+
+    <details class="methodology card">
+      <summary>評分方式與限制說明（點開展開）</summary>
+      <div class="body" id="methodology-body"></div>
+    </details>
+
+  </div>
+
+  <footer class="page-foot">
+    資料每日由 GitHub Actions 自動更新（<code>.github/workflows/update-market-indicators.yml</code>）。
+    本頁面為前端計算，不會回寫任何資料。
+  </footer>
+</div>
+
+<script>
+"use strict";
+
+const CSV_PATH = "data/market_liquidity_indicators.csv";
+
+const PALETTE = {
+  s1: "var(--series-1)", s2: "var(--series-2)", s3: "var(--series-3)", s4: "var(--series-4)",
+  s5: "var(--series-5)", s6: "var(--series-6)", s7: "var(--series-7)", s8: "var(--series-8)",
+  good: "var(--status-good)", warning: "var(--status-warning)",
+  serious: "var(--status-serious)", critical: "var(--status-critical)",
+};
+
+// ---------------------------------------------------------------------------
+// CSV loading
+// ---------------------------------------------------------------------------
+async function loadCsv(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error("Failed to fetch " + path + ": " + res.status);
+  const text = await res.text();
+  const lines = text.trim().split("\n");
+  const header = lines[0].split(",");
+  const rows = [];
+  for (let i = 1; i < lines.length; i++) {
+    const cells = lines[i].split(",");
+    const row = {};
+    for (let c = 0; c < header.length; c++) {
+      const raw = cells[c];
+      if (header[c] === "date") { row.date = raw; continue; }
+      row[header[c]] = raw === undefined || raw === "" ? null : parseFloat(raw);
+    }
+    rows.push(row);
+  }
+  return rows;
+}
+
+// ---------------------------------------------------------------------------
+// Track 1 scoring engine (implements the thresholds from the prompt template;
+// items marked "自訂門檻" are this dashboard's own calibration where the
+// source document only gave a qualitative description, not exact numbers)
+// ---------------------------------------------------------------------------
+function bandScore(value, bands) {
+  if (value === null || value === undefined || Number.isNaN(value)) return null;
+  for (const [upper, score] of bands) if (value < upper) return score;
+  return bands[bands.length - 1][1];
+}
+
+const BANDS = {
+  fed_bs_yoy: [[-5, -2], [-1, -1], [1, 0], [5, 1], [Infinity, 2]],
+  on_rrp: [[50, -1], [500, 0], [1500, 1], [Infinity, 2]],
+  m2_yoy: [[0, -2], [2, -1], [4, 0], [6, 1], [Infinity, 2]],
+  hy_oas: [[3, 2], [4, 1], [5, 0], [6, -1], [Infinity, -2]],
+  // 自訂門檻：Baa10Y 利差歷史區間與 HY OAS 不同，依其典型範圍重新校準，僅供替代參考
+  baa10y_proxy: [[2.0, 2], [2.5, 1], [3.5, 0], [4.5, -1], [Infinity, -2]],
+  t10y2y_bp: [[-50, -2], [0, -1], [30, 0], [80, 1], [Infinity, 2]],
+  sofr_ioer_bp: [[0, 1], [5, 0], [10, -1], [Infinity, -2]],
+  vix: [[12, 2], [15, 1], [25, 0], [35, -1], [Infinity, -2]],
+  // 自訂門檻：文件僅質化描述 VIX9D-VIX 期限結構，未給精確數字
+  vix_term: [[-3, 2], [-1, 1], [0, 0], [2, -1], [Infinity, -2]],
+  margin_debt_yoy: [[-15, -2], [0, -1], [20, 0], [40, 1], [Infinity, 2]],
+  dxy_monthly: [[-3, 2], [-1, 1], [1, 0], [3, -1], [Infinity, -2]],
+};
+
+const WEIGHTS = { c1: 0.25, c2: 0.25, c3: 0.15, c4: 0.20, c5: 0.15 };
+
+function scoreRow(row) {
+  const items = {};
+  items.fed_bs_yoy = { v: row.fed_bs_yoy_pct, s: bandScore(row.fed_bs_yoy_pct, BANDS.fed_bs_yoy), cat: "c1", label: "Fed資產負債表YoY%" };
+  items.on_rrp = { v: row.on_rrp_balance_usd_bn, s: bandScore(row.on_rrp_balance_usd_bn, BANDS.on_rrp), cat: "c1", label: "ON RRP餘額(十億美元)" };
+  items.m2_yoy = { v: row.m2_yoy_pct, s: bandScore(row.m2_yoy_pct, BANDS.m2_yoy), cat: "c1", label: "M2 YoY%" };
+
+  const usingRealHyOas = row.hy_oas_pct !== null && row.hy_oas_pct !== undefined;
+  if (usingRealHyOas) {
+    items.credit_spread = { v: row.hy_oas_pct, s: bandScore(row.hy_oas_pct, BANDS.hy_oas), cat: "c2", label: "HY信用利差OAS%（真實值）" };
+  } else {
+    items.credit_spread = { v: row.baa10y_credit_spread_proxy_pct, s: bandScore(row.baa10y_credit_spread_proxy_pct, BANDS.baa10y_proxy), cat: "c2", label: "Baa10Y利差%（替代指標）" };
+  }
+  items.t10y2y = { v: row.t10y2y_bp, s: bandScore(row.t10y2y_bp, BANDS.t10y2y_bp), cat: "c2", label: "2年10年公債利差(bp)" };
+  items.sofr_ioer = { v: row.sofr_ioer_spread_bp, s: bandScore(row.sofr_ioer_spread_bp, BANDS.sofr_ioer_bp), cat: "c2", label: "SOFR-IOER利差(bp)" };
+
+  items.vix = { v: row.vix, s: bandScore(row.vix, BANDS.vix), cat: "c4", label: "VIX" };
+  items.vix_term = { v: row.vix_term_structure_9d_minus_vix, s: bandScore(row.vix_term_structure_9d_minus_vix, BANDS.vix_term), cat: "c4", label: "VIX期限結構(VIX9D-VIX)" };
+  items.margin_debt_yoy = { v: row.margin_debt_yoy_pct, s: bandScore(row.margin_debt_yoy_pct, BANDS.margin_debt_yoy), cat: "c4", label: "融資餘額YoY%" };
+
+  items.dxy_monthly = { v: row.dxy_monthly_change_pct, s: bandScore(row.dxy_monthly_change_pct, BANDS.dxy_monthly), cat: "c5", label: "DXY月變動%" };
+  // 股票型ETF資金流：無資料來源，category c5 僅有此單一項目
+
+  const cats = { c1: [], c2: [], c3: [], c4: [], c5: [] };
+  for (const key in items) if (items[key].s !== null) cats[items[key].cat].push(items[key].s);
+
+  const catAvgRaw = {};
+  for (const c in cats) catAvgRaw[c] = cats[c].length ? cats[c].reduce((a, b) => a + b, 0) / cats[c].length : null;
+
+  // 過熱修正：category c4 任一項單獨衝到 +2，但其他類別（c1/c2/c5）未同步轉強（平均<0.4）時，
+  // 該項在 c4 平均計算中的貢獻收斂至 +1.0
+  const otherAvgs = [catAvgRaw.c1, catAvgRaw.c2, catAvgRaw.c5].filter((v) => v !== null);
+  const othersStrong = otherAvgs.length > 0 && (otherAvgs.reduce((a, b) => a + b, 0) / otherAvgs.length) >= 0.4;
+  let overheatFlag = false;
+  const c4Adjusted = cats.c4.map((s) => {
+    if (s === 2 && !othersStrong) { overheatFlag = true; return 1.0; }
+    return s;
+  });
+  const catAvg = { ...catAvgRaw };
+  catAvg.c4 = c4Adjusted.length ? c4Adjusted.reduce((a, b) => a + b, 0) / c4Adjusted.length : null;
+
+  let weightSum = 0, weighted = 0;
+  for (const c in WEIGHTS) {
+    if (catAvg[c] !== null) { weighted += catAvg[c] * WEIGHTS[c]; weightSum += WEIGHTS[c]; }
+  }
+  const composite = weightSum > 0 ? weighted / weightSum : null;
+
+  let divergenceFlag = false;
+  if (catAvg.c2 !== null && catAvg.c4 !== null && Math.abs(catAvg.c2 - catAvg.c4) >= 1.5) divergenceFlag = true;
+
+  return { items, catAvg, composite, overheatFlag, divergenceFlag, usingRealHyOas };
+}
+
+function lightForScore(score) {
+  if (score === null) return { emoji: "—", label: "無資料", key: "na" };
+  if (score >= 1.2) return { emoji: "🟢🟢", label: "深綠（強力做多）", key: "deepgood" };
+  if (score >= 0.4) return { emoji: "🟢", label: "綠燈（偏牛）", key: "good" };
+  if (score >= -0.4) return { emoji: "🟡", label: "黃燈（觀望）", key: "warning" };
+  if (score >= -1.2) return { emoji: "🔴", label: "紅燈（偏熊）", key: "serious" };
+  return { emoji: "🔴🔴", label: "深紅（強力防禦）", key: "critical" };
+}
+
+function scorePillClass(s) {
+  if (s === null) return "na";
+  if (s >= 2) return "s2";
+  if (s >= 1) return "s1";
+  if (s >= 0) return "s0";
+  if (s >= -1) return "sm1";
+  return "sm2";
+}
+
+// ---------------------------------------------------------------------------
+// Track 2 sentinel checklist (EOD daily-close approximations of the document's
+// intraday signals — see banner + methodology for caveats)
+// ---------------------------------------------------------------------------
+function track2ForIndex(rows, i) {
+  const row = rows[i];
+  const prev = i > 0 ? rows[i - 1] : null;
+  const layer1 = [];
+  layer1.push(["VIX期限結構倒掛 (VIX9D>VIX)", row.vix9d_gt_vix_flag === 1]);
+  const crossAsset = row.sp500_daily_pct_chg < 0 && row.gold_daily_pct_chg < 0 && row.dgs10_1d_change_bp > 0;
+  layer1.push(["跨資產同步走弱(股/債/金)", !!crossAsset]);
+  layer1.push(["10年債殖利率單日變動>15bp", Math.abs(row.dgs10_1d_change_bp) > 15]);
+  layer1.push(["S&P500單日跌>2%（隔夜跳空近似）", row.sp500_daily_pct_chg < -2]);
+
+  const layer2 = [];
+  if (prev && row.sofr_ioer_spread_bp !== null && prev.sofr_ioer_spread_bp !== null) {
+    layer2.push(["SOFR-IOER利差單日跳升>5bp", (row.sofr_ioer_spread_bp - prev.sofr_ioer_spread_bp) > 5]);
+  }
+  if (prev && row.skew_index !== null && prev.skew_index !== null) {
+    layer2.push(["SKEW指數單日急升>5點", (row.skew_index - prev.skew_index) > 5]);
+  }
+
+  const layer3 = [];
+  const asiaDown = [row.nikkei225_daily_pct_chg, row.kospi_daily_pct_chg, row.sse_composite_daily_pct_chg].some((v) => v !== null && v < -2);
+  layer3.push(["亞股重挫(日經/KOSPI/上證跌>2%)", asiaDown]);
+  const commodityMove = [row.wti_crude_daily_pct_chg, row.gold_daily_pct_chg].some((v) => v !== null && Math.abs(v) > 3);
+  layer3.push(["原油/黃金異常波動(>3%)", commodityMove]);
+
+  const l1Count = layer1.filter((x) => x[1]).length;
+  const l2Count = layer2.filter((x) => x[1]).length;
+  const l3Count = layer3.filter((x) => x[1]).length;
+
+  let sop;
+  if (l1Count >= 2) sop = { icon: "🚨", text: "立即啟動風險降溫" };
+  else if (l1Count >= 1 && l2Count >= 2) sop = { icon: "⚡", text: "提高警戒，部分避險" };
+  else if (l3Count >= 1 && l1Count === 0 && l2Count === 0) sop = { icon: "📡", text: "早期預警，留意後續開盤" };
+  else sop = { icon: "—", text: "維持軌道一中期判斷" };
+
+  return { layer1, layer2, layer3, l1Count, l2Count, l3Count, sop };
+}
+
+// ---------------------------------------------------------------------------
+// Chart rendering (inline SVG, per dataviz mark spec: thin 2px lines,
+// direct-labeled legend, hover crosshair + tooltip, table-view alternative)
+// ---------------------------------------------------------------------------
+function css(varName) {
+  return getComputedStyle(document.body).getPropertyValue(varName).trim();
+}
+
+function buildLineChart(svgEl, tooltipEl, dates, series, opts) {
+  opts = opts || {};
+  const W = 900, H = opts.height || 220;
+  const padL = 46, padR = 12, padT = 10, padB = 24;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+
+  let allVals = [];
+  series.forEach((s) => s.values.forEach((v) => { if (v !== null && !Number.isNaN(v)) allVals.push(v); }));
+  if (opts.includeZero) allVals.push(0);
+  let vmin = Math.min(...allVals), vmax = Math.max(...allVals);
+  if (vmin === vmax) { vmin -= 1; vmax += 1; }
+  const pad = (vmax - vmin) * 0.08;
+  vmin -= pad; vmax += pad;
+
+  const n = dates.length;
+  const x = (i) => padL + (n <= 1 ? 0 : (i / (n - 1)) * plotW);
+  const y = (v) => padT + plotH - ((v - vmin) / (vmax - vmin)) * plotH;
+
+  const svgNS = "http://www.w3.org/2000/svg";
+  while (svgEl.firstChild) svgEl.removeChild(svgEl.firstChild);
+  svgEl.setAttribute("viewBox", "0 0 " + W + " " + H);
+  svgEl.setAttribute("preserveAspectRatio", "none");
+  svgEl.style.height = H + "px";
+
+  const gGrid = document.createElementNS(svgNS, "g");
+  const gridColor = css("--gridline");
+  const nGrid = 4;
+  for (let g = 0; g <= nGrid; g++) {
+    const v = vmin + (g / nGrid) * (vmax - vmin);
+    const yy = y(v);
+    const line = document.createElementNS(svgNS, "line");
+    line.setAttribute("x1", padL); line.setAttribute("x2", W - padR);
+    line.setAttribute("y1", yy); line.setAttribute("y2", yy);
+    line.setAttribute("stroke", gridColor); line.setAttribute("stroke-width", "1");
+    gGrid.appendChild(line);
+    const label = document.createElementNS(svgNS, "text");
+    label.setAttribute("x", padL - 6); label.setAttribute("y", yy + 3);
+    label.setAttribute("text-anchor", "end"); label.setAttribute("font-size", "9");
+    label.setAttribute("fill", css("--text-muted"));
+    label.textContent = (opts.fmt ? opts.fmt(v) : v.toFixed(1));
+    gGrid.appendChild(label);
+  }
+  svgEl.appendChild(gGrid);
+
+  if (opts.bands) {
+    const gBands = document.createElementNS(svgNS, "g");
+    opts.bands.forEach((b) => {
+      const y1 = y(Math.min(vmax, b.hi)), y2 = y(Math.max(vmin, b.lo));
+      const rect = document.createElementNS(svgNS, "rect");
+      rect.setAttribute("x", padL); rect.setAttribute("width", plotW);
+      rect.setAttribute("y", y1); rect.setAttribute("height", Math.max(0, y2 - y1));
+      rect.setAttribute("fill", b.color); rect.setAttribute("opacity", b.opacity || 0.14);
+      gBands.appendChild(rect);
+    });
+    svgEl.appendChild(gBands);
+  }
+
+  // x-axis: first/last date labels
+  const gAxis = document.createElementNS(svgNS, "g");
+  [0, n - 1].forEach((i) => {
+    const t = document.createElementNS(svgNS, "text");
+    t.setAttribute("x", x(i)); t.setAttribute("y", H - 6);
+    t.setAttribute("text-anchor", i === 0 ? "start" : "end");
+    t.setAttribute("font-size", "9"); t.setAttribute("fill", css("--text-muted"));
+    t.textContent = dates[i];
+    gAxis.appendChild(t);
+  });
+  svgEl.appendChild(gAxis);
+
+  series.forEach((s) => {
+    let d = "";
+    let started = false;
+    s.values.forEach((v, i) => {
+      if (v === null || Number.isNaN(v)) { started = false; return; }
+      const cmd = started ? "L" : "M";
+      d += cmd + x(i).toFixed(2) + "," + y(v).toFixed(2) + " ";
+      started = true;
+    });
+    const path = document.createElementNS(svgNS, "path");
+    path.setAttribute("d", d.trim());
+    path.setAttribute("fill", "none");
+    path.setAttribute("stroke", s.color);
+    path.setAttribute("stroke-width", "2");
+    path.setAttribute("stroke-linejoin", "round");
+    path.setAttribute("stroke-linecap", "round");
+    svgEl.appendChild(path);
+  });
+
+  // hover layer
+  const overlay = document.createElementNS(svgNS, "rect");
+  overlay.setAttribute("x", padL); overlay.setAttribute("y", padT);
+  overlay.setAttribute("width", plotW); overlay.setAttribute("height", plotH);
+  overlay.setAttribute("fill", "transparent");
+  overlay.style.cursor = "crosshair";
+
+  const crosshair = document.createElementNS(svgNS, "line");
+  crosshair.setAttribute("y1", padT); crosshair.setAttribute("y2", padT + plotH);
+  crosshair.setAttribute("stroke", css("--baseline")); crosshair.setAttribute("stroke-width", "1");
+  crosshair.style.display = "none";
+  svgEl.appendChild(crosshair);
+  svgEl.appendChild(overlay);
+
+  overlay.addEventListener("mousemove", (ev) => {
+    const rect = svgEl.getBoundingClientRect();
+    const relX = (ev.clientX - rect.left) / rect.width * W;
+    let i = Math.round(((relX - padL) / plotW) * (n - 1));
+    i = Math.max(0, Math.min(n - 1, i));
+    crosshair.style.display = "";
+    crosshair.setAttribute("x1", x(i)); crosshair.setAttribute("x2", x(i));
+
+    let html = "<div style='font-weight:600;margin-bottom:4px;'>" + dates[i] + "</div>";
+    series.forEach((s) => {
+      const v = s.values[i];
+      html += "<div><span style='display:inline-block;width:8px;height:8px;border-radius:2px;background:" + s.color + ";margin-right:6px;'></span>" +
+        s.name + ": " + (v === null || Number.isNaN(v) ? "—" : (opts.fmt ? opts.fmt(v) : v.toFixed(2))) + "</div>";
+    });
+    tooltipEl.innerHTML = html;
+    tooltipEl.style.display = "block";
+    const svgRect = svgEl.parentElement.getBoundingClientRect();
+    let left = (ev.clientX - svgRect.left) + 12;
+    if (left > svgRect.width - 160) left = (ev.clientX - svgRect.left) - 172;
+    tooltipEl.style.left = left + "px";
+    tooltipEl.style.top = (ev.clientY - svgRect.top - 40) + "px";
+  });
+  overlay.addEventListener("mouseleave", () => { crosshair.style.display = "none"; tooltipEl.style.display = "none"; });
+}
+
+function legendHtml(series) {
+  return series.map((s) =>
+    "<span class='item'><span class='swatch line' style='background:" + s.color + "'></span>" + s.name + "</span>"
+  ).join("");
+}
+
+// ---------------------------------------------------------------------------
+// Main
+// ---------------------------------------------------------------------------
+(async function main() {
+  let rows;
+  try {
+    rows = await loadCsv(CSV_PATH);
+  } catch (err) {
+    document.getElementById("load-state").textContent = "資料載入失敗：" + err.message + "（若在本機以 file:// 開啟，瀏覽器會擋 fetch，請改用本機伺服器或直接透過 GitHub Pages 開啟）";
+    return;
+  }
+  document.getElementById("load-state").style.display = "none";
+  document.getElementById("app").style.display = "";
+
+  const dates = rows.map((r) => r.date);
+  const scores = rows.map((r) => scoreRow(r));
+  const composites = scores.map((s) => s.composite);
+
+  const latestRow = rows[rows.length - 1];
+  const latestScore = scores[scores.length - 1];
+  const light = lightForScore(latestScore.composite);
+
+  // ---- stat tiles ----
+  const statRow = document.getElementById("stat-row");
+  const tiles = [
+    { label: "最新交易日", value: latestRow.date, sub: "" },
+    { label: "軌道一綜合分數", value: latestScore.composite === null ? "—" : latestScore.composite.toFixed(2), sub: "-2 ~ +2" },
+    { label: "燈號", value: light.emoji + " " + light.label, sub: "", isLight: true },
+    { label: "VIX", value: latestRow.vix === null ? "—" : latestRow.vix.toFixed(1), sub: "VIX9D " + (latestRow.vix9d === null ? "—" : latestRow.vix9d.toFixed(1)) },
+    { label: "HY信用利差 / Baa10Y替代", value: (latestRow.hy_oas_pct !== null ? latestRow.hy_oas_pct.toFixed(2) + "%" : (latestRow.baa10y_credit_spread_proxy_pct !== null ? latestRow.baa10y_credit_spread_proxy_pct.toFixed(2) + "%*" : "—")), sub: latestScore.usingRealHyOas ? "真實 HY OAS" : "* 替代指標(Baa10Y)" },
+  ];
+  statRow.innerHTML = tiles.map((t) =>
+    "<div class='stat-tile'><div class='label'>" + t.label + "</div><div class='value" + (t.isLight ? " light-badge" : "") + "'>" + t.value + "</div><div class='sub'>" + t.sub + "</div></div>"
+  ).join("");
+
+  const flagsHtml = [];
+  if (latestScore.overheatFlag) flagsHtml.push("<span class='flag warn'>⚠️ 過熱警示</span>");
+  if (latestScore.divergenceFlag) flagsHtml.push("<span class='flag critical'>⚠️ 結構性背離（②信用 vs ④情緒）</span>");
+  if (flagsHtml.length) statRow.insertAdjacentHTML("beforeend", "<div style='grid-column:1/-1;' class='flags'>" + flagsHtml.join("") + "</div>");
+
+  // ---- track2 banner + latest ----
+  const t2 = track2ForIndex(rows, rows.length - 1);
+  document.getElementById("track2-banner").innerHTML =
+    "<strong>軌道二 SOP（" + latestRow.date + "，日頻近似值）：" + t2.sop.icon + " " + t2.sop.text + "</strong> " +
+    "— 第一層觸發 " + t2.l1Count + "/4、第二層觸發 " + t2.l2Count + "/2（另3項無資料）、第三層觸發 " + t2.l3Count + "/2（另1項無資料）。" +
+    "本區塊全部以「當日收盤」資料近似盤中/隔夜訊號，<u>不是</u>文件原意的即時盤中偵測，僅供歷史回顧與統計，請勿用於即時交易決策。";
+
+  // ---- hero chart: composite score history ----
+  const bands = [
+    { lo: 1.2, hi: 2.0, color: PALETTE.good, opacity: 0.28 },
+    { lo: 0.4, hi: 1.2, color: PALETTE.good, opacity: 0.13 },
+    { lo: -0.4, hi: 0.4, color: PALETTE.warning, opacity: 0.14 },
+    { lo: -1.2, hi: -0.4, color: PALETTE.serious, opacity: 0.16 },
+    { lo: -2.0, hi: -1.2, color: PALETTE.critical, opacity: 0.24 },
+  ];
+  document.getElementById("hero-legend").innerHTML = legendHtml([{ name: "軌道一綜合分數", color: PALETTE.s1 }]) +
+    "<span class='item'><span class='swatch' style='background:" + PALETTE.good + ";opacity:.3'></span>綠燈區</span>" +
+    "<span class='item'><span class='swatch' style='background:" + PALETTE.warning + ";opacity:.3'></span>黃燈區</span>" +
+    "<span class='item'><span class='swatch' style='background:" + PALETTE.critical + ";opacity:.3'></span>紅燈區</span>";
+  buildLineChart(document.getElementById("chart-hero"), document.getElementById("tooltip-hero"), dates,
+    [{ name: "綜合分數", color: PALETTE.s1, values: composites }],
+    { height: 260, bands, fmt: (v) => v.toFixed(2), includeZero: true });
+
+  // ---- breakdown table ----
+  const catNames = { c1: "①總體貨幣流動性(25%)", c2: "②資金成本與信用(25%)", c3: "③市場微觀結構(15%)", c4: "④風險偏好情緒(20%)", c5: "⑤跨資產資金流向(15%)" };
+  let bHtml = "<thead><tr><th>類別</th><th>指標</th><th>數值</th><th class='score'>評分</th><th>類別平均</th></tr></thead><tbody>";
+  for (const cat of ["c1", "c2", "c3", "c4", "c5"]) {
+    const itemsInCat = Object.values(latestScore.items).filter((it) => it.cat === cat);
+    const avg = latestScore.catAvg[cat];
+    if (itemsInCat.length === 0) {
+      bHtml += "<tr><td>" + catNames[cat] + "</td><td colspan='3' style='color:var(--text-muted)'>無可用資料（見下方限制說明）</td><td>—</td></tr>";
+      continue;
+    }
+    itemsInCat.forEach((it, idx) => {
+      bHtml += "<tr>" +
+        (idx === 0 ? "<td rowspan='" + itemsInCat.length + "'>" + catNames[cat] + "</td>" : "") +
+        "<td>" + it.label + "</td>" +
+        "<td>" + (it.v === null ? "—" : it.v.toFixed(2)) + "</td>" +
+        "<td class='score'><span class='score-pill " + scorePillClass(it.s) + "'>" + (it.s === null ? "N/A" : (it.s > 0 ? "+" : "") + it.s) + "</span></td>" +
+        (idx === 0 ? "<td rowspan='" + itemsInCat.length + "'>" + (avg === null ? "—" : avg.toFixed(2)) + "</td>" : "") +
+        "</tr>";
+    });
+  }
+  bHtml += "</tbody>";
+  document.getElementById("breakdown-table").innerHTML = bHtml;
+
+  // ---- supporting charts grid ----
+  const chartGrid = document.getElementById("chart-grid");
+  const chartDefs = [
+    { id: "vix", title: "VIX / VIX9D", unit: "指數點", series: [
+        { name: "VIX", color: PALETTE.s1, values: rows.map((r) => r.vix) },
+        { name: "VIX9D", color: PALETTE.s2, values: rows.map((r) => r.vix9d) },
+      ] },
+    { id: "credit", title: "信用利差", unit: "%", series: [
+        { name: "HY OAS（真實，2023-）", color: PALETTE.s8, values: rows.map((r) => r.hy_oas_pct) },
+        { name: "Baa10Y利差（替代，全歷史）", color: PALETTE.s7, values: rows.map((r) => r.baa10y_credit_spread_proxy_pct) },
+      ] },
+    { id: "liquidity", title: "Fed資產負債表YoY% / M2 YoY%", unit: "%", series: [
+        { name: "Fed資產負債表YoY%", color: PALETTE.s1, values: rows.map((r) => r.fed_bs_yoy_pct) },
+        { name: "M2 YoY%", color: PALETTE.s3, values: rows.map((r) => r.m2_yoy_pct) },
+      ] },
+    { id: "rates", title: "2年10年利差 / SOFR-IOER利差", unit: "bp", series: [
+        { name: "2s10s (bp)", color: PALETTE.s1, values: rows.map((r) => r.t10y2y_bp) },
+        { name: "SOFR-IOER (bp)", color: PALETTE.s4, values: rows.map((r) => r.sofr_ioer_spread_bp) },
+      ] },
+    { id: "dxy", title: "美元指數 DXY", unit: "指數點", series: [
+        { name: "DXY (Fed Broad USD Index)", color: PALETTE.s1, values: rows.map((r) => r.dxy_broad_index) },
+      ] },
+    { id: "margin", title: "融資餘額年增率", unit: "%", series: [
+        { name: "融資餘額YoY%", color: PALETTE.s1, values: rows.map((r) => r.margin_debt_yoy_pct) },
+      ] },
+  ];
+  chartGrid.innerHTML = chartDefs.map((c) =>
+    "<div class='card'><h2>" + c.title + " <span class='unit'>" + c.unit + "</span></h2>" +
+    "<div class='legend' id='legend-" + c.id + "'></div>" +
+    "<div class='chart-wrap'><svg class='chart-svg' id='chart-" + c.id + "'></svg><div class='chart-tooltip' id='tooltip-" + c.id + "'></div></div></div>"
+  ).join("");
+  chartDefs.forEach((c) => {
+    document.getElementById("legend-" + c.id).innerHTML = legendHtml(c.series);
+    buildLineChart(document.getElementById("chart-" + c.id), document.getElementById("tooltip-" + c.id), dates, c.series, { height: 200 });
+  });
+
+  // ---- track2 recent-20-day table ----
+  const recentN = 20;
+  const startIdx = Math.max(0, rows.length - recentN);
+  let tHtml = "<thead><tr><th>日期</th><th>VIX9D&gt;VIX</th><th>10Y殖利率變動(bp)</th><th>S&P500</th><th>日經</th><th>KOSPI</th><th>上證</th><th>WTI</th><th>黃金</th><th>SOP</th></tr></thead><tbody>";
+  const pctCell = (v) => v === null ? "—" : "<span class='" + (v >= 0 ? "cell-pos" : "cell-neg") + "'>" + (v >= 0 ? "+" : "") + v.toFixed(2) + "%</span>";
+  for (let i = rows.length - 1; i >= startIdx; i--) {
+    const r = rows[i];
+    const t2r = track2ForIndex(rows, i);
+    tHtml += "<tr><td>" + r.date + "</td>" +
+      "<td>" + (r.vix9d_gt_vix_flag === 1 ? "是" : "否") + "</td>" +
+      "<td>" + (r.dgs10_1d_change_bp === null ? "—" : r.dgs10_1d_change_bp.toFixed(1)) + "</td>" +
+      "<td>" + pctCell(r.sp500_daily_pct_chg) + "</td>" +
+      "<td>" + pctCell(r.nikkei225_daily_pct_chg) + "</td>" +
+      "<td>" + pctCell(r.kospi_daily_pct_chg) + "</td>" +
+      "<td>" + pctCell(r.sse_composite_daily_pct_chg) + "</td>" +
+      "<td>" + pctCell(r.wti_crude_daily_pct_chg) + "</td>" +
+      "<td>" + pctCell(r.gold_daily_pct_chg) + "</td>" +
+      "<td>" + t2r.sop.icon + " " + t2r.sop.text + "</td></tr>";
+  }
+  tHtml += "</tbody>";
+  document.getElementById("track2-table").innerHTML = tHtml;
+
+  // ---- methodology ----
+  document.getElementById("methodology-body").innerHTML = `
+    <h3>資料涵蓋範圍</h3>
+    <p>${dates[0]} 至 ${dates[dates.length - 1]}，共 ${rows.length} 個 NYSE 交易日，低頻資料（週/月更新）以前值往前填補。</p>
+    <h3>軌道一評分</h3>
+    <p>依文件的 5 類 13 項指標計算，權重 ①25% ②25% ③15% ④20% ⑤15%；③市場微觀結構完全無資料來源、
+    ⑤僅有 DXY 月變動一項（ETF資金流無資料），計算綜合分數時已依「實際有資料的類別權重」重新正規化。
+    HY信用利差在 2023-08 前無真實 OAS 資料，改用 Baa10Y 公司債利差作為替代，門檻已自行重新校準（見下方
+    <code>baa10y_proxy</code>），兩者<strong>不是同一金融工具，數值不可直接比較</strong>。</p>
+    <p>VIX期限結構（VIX9D-VIX）與 SOFR-IOER 利差評分中「陡峭正價差/嚴重逆價差」「>10bp」等邊界，原文件僅
+    質化描述或未給滿分區間，此處門檻為本頁面自訂校準，僅供參考。</p>
+    <p>過熱修正：④類別任一項評分達 +2、但①②⑤類別平均未同步達 +0.4 以上時，該項在④類別平均中的貢獻收斂至
+    +1.0，並標註「過熱警示」。背離警示：|②類別平均 - ④類別平均| ≥ 1.5 時標註（③因無資料而略過該比對腳）。</p>
+    <h3>軌道二（即時應變層）</h3>
+    <p>原文件設計為盤中/隔夜即時訊號，本儀表板僅有<strong>日頻收盤</strong>資料，因此全部改用當日/前一日收盤
+    近似：S&P500單日跌幅近似「隔夜跳空」、10年債殖利率單日變動近似「盤中異常跳升」等。跨貨幣基差互換、市場
+    廣度、熔斷事件三項完全無資料來源。<strong>這些近似值不能取代真正的盤中監控</strong>，僅供歷史統計與
+    回顧使用。</p>
+    <h3>已知資料限制</h3>
+    <p>完整清單見 <a href="data/UNAVAILABLE_INDICATORS.md">UNAVAILABLE_INDICATORS.md</a>。</p>
+  `;
+})();
+</script>
+</body>
+</html>
